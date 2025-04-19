@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Bibliométrico: Computational Thinking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .visualization {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Análisis Bibliométrico: Computational Thinking</h1>
+        <p>Proyecto de investigación - Universidad del Quindío</p>
+    </header>
+
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <p>Este proyecto analiza la producción científica sobre <strong>Computational Thinking</strong> utilizando técnicas bibliométricas. Los datos fueron extraídos de Scopus, ScienceDirect y Google Scholar.</p>
+        </section>
+
+        <section id="estadisticas">
+            <h2>📊 Estadísticas Generales</h2>
+            <div class="visualization">
+                <h3>Publicaciones por Año</h3>
+                <img src="publicaciones_por_año.png" alt="Publicaciones por año">
+                <p><strong>Total de publicaciones:</strong> 150</p>
+                <p><strong>Años cubiertos:</strong> 2006 - 2023</p>
+            </div>
+        </section>
+
+        <section id="autores">
+            <h2>👥 Autores más Productivos</h2>
+            <div class="visualization">
+                <table>
+                    <tr>
+                        <th>Autor</th>
+                        <th>Publicaciones</th>
+                        <th>Institución</th>
+                    </tr>
+                    <tr>
+                        <td>Jeannette M. Wing</td>
+                        <td>12</td>
+                        <td>Columbia University</td>
+                    </tr>
+                    <tr>
+                        <td>Valerie J. Shute</td>
+                        <td>8</td>
+                        <td>Florida State University</td>
+                    </tr>
+                    <tr>
+                        <td>Peter J. Denning</td>
+                        <td>6</td>
+                        <td>Naval Postgraduate School</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="palabras-clave">
+            <h2>🔍 Nube de Palabras Clave</h2>
+            <div class="visualization">
+                <img src="nube_palabras.png" alt="Nube de palabras">
+                <p>Términos más frecuentes en abstracts: <em>algorithm, problem-solving, education, programming, abstraction</em>.</p>
+            </div>
+        </section>
+
+        <section id="red-coautoria">
+            <h2>🤝 Red de Coautoría</h2>
+            <div class="visualization">
+                <img src="red_coautoria.png" alt="Red de coautoría">
+                <p>Principales colaboraciones entre autores. Cada línea representa al menos 2 publicaciones conjuntas.</p>
+            </div>
+        </section>
+
+        <section id="similitud">
+            <h2>📈 Similitud entre Abstracts</h2>
+            <div class="visualization">
+                <h3>Grupos temáticos identificados</h3>
+                <ul>
+                    <li><strong>Grupo 1:</strong> Enseñanza de CT en K-12</li>
+                    <li><strong>Grupo 2:</strong> Herramientas de evaluación</li>
+                    <li><strong>Grupo 3:</strong> Fundamentos teóricos</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 - Proyecto de Análisis de Algoritmos, Universidad del Quindío</p>
+        <p>Datos actualizados: Noviembre 2023</p>
+    </footer>
+</body>
+</html>

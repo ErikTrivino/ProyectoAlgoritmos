@@ -1,0 +1,72 @@
+Librerías
+https://www.semanticscholar.org/
+https://scholar.google.com/
+https://library.uniquindio.edu.co/databases
+https://pubmed.ncbi.nlm.nih.gov/
+PubMed 🏥
+
+Base de datos de artículos médicos y biológicos.
+
+Tiene una API oficial (Entrez de Biopython), pero también permite scraping con BeautifulSoup.
+
+
+
+
+https://ieeexplore.ieee.org/Xplore/home.jsp //necestia logearse y pagar
+
+
+Se utilizara python con 
+pip install requests beautifulsoup4 selenium scholarly pandas
+pip install unidecode
+
+
+Herramientas para Web Scraping:
+
+Python (Recomendado)
+Librerías útiles:
+
+requests + BeautifulSoup (para páginas HTML estáticas).
+
+selenium (para páginas dinámicas con JavaScript).
+
+scrapy (para proyectos más grandes y automatizados).
+
+scholarly (para extraer datos de Google Scholar, aunque no es tan confiable como Scopus).
+
+ Ejemplo con Python (Scopus/ScienceDirect) El ejemplo se utiliza google academy
+
+
+
+
+Análisis bibliométrico:
+
+Usar Bibliometrix (R) o Python (pandas + matplotlib) para:
+
+Conteo de autores, instituciones, años.
+
+Nubes de palabras (wordcloud en Python).
+
+Redes de co-ocurrencia (networkx en Python).
+
+
+Código de Análisis Bibliométrico (usando pandas, matplotlib, networkx y wordcloud)
+Qué hace este código?
+Estadísticas básicas:
+
+Muestra el número total de publicaciones, años de publicación y gráfico de distribución por año.
+
+Nube de palabras:
+
+Genera una visualización de los términos más frecuentes en los títulos de los artículos.
+
+Red de coautoría:
+
+Identifica colaboraciones entre autores y crea un gráfico de red (útil para ver comunidades de investigación).
+
+Exportación de resultados:
+
+Guarda un CSV con el conteo de publicaciones por autor.
+
+
+
+

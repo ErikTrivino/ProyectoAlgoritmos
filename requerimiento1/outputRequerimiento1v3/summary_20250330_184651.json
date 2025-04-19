@@ -1,0 +1,19 @@
+{
+  "timestamp": "20250330_184651",
+  "sources_processed": [
+    "SCOPUS",
+    "WOS"
+  ],
+  "unique_entries": 2,
+  "duplicate_entries": 2,
+  "duplicate_stats": {
+    "exact_duplicates": 2,
+    "similar_duplicates": 0,
+    "potential_duplicates": 0
+  },
+  "output_files": {
+    "unified": "output\\unified_results_20250330_184651.ris",
+    "duplicates": "output\\duplicate_entries_20250330_184651.ris",
+    "report": "output\\duplicates_report_20250330_184651.ris"
+  }
+}
