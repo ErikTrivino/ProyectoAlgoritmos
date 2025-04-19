@@ -7,8 +7,8 @@ from datetime import datetime
 import time
 from unidecode import unidecode
 import difflib
-import hashlib
-from typing import List, Dict, Union  # Importamos los tipos necesarios
+import re
+from typing import List, Dict, Union
 
 class DatabaseScraper:
     """Clase para manejar el scraping de diferentes bases de datos"""
@@ -21,7 +21,6 @@ class DatabaseScraper:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
         
-        # URL de ejemplo (necesitarías ajustar según la estructura real)
         url = f"https://www.scopus.com/results/results.uri?query={query}"
         
         try:
@@ -88,6 +87,206 @@ class DatabaseScraper:
             
         except Exception as e:
             print(f"Error al scrapear ScienceDirect: {str(e)}")
+            return []
+
+    @staticmethod
+    def scrape_semantic_scholar(query: str) -> List[Dict[str, Union[str, List[str]]]]:
+        """Scraping de Semantic Scholar"""
+        print(f"Scrapeando Semantic Scholar para: {query}")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        url = f"https://www.semanticscholar.org/search?q={query}&sort=relevance"
+        
+        try:
+            response = requests.get(url, headers=headers)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            articles = []
+            for item in soup.select('[data-test-id="paper-row"]'):
+                title_elem = item.select_one('[data-test-id="title-link"]')
+                title = title_elem.text.strip() if title_elem else ''
+                
+                authors_elem = item.select_one('[data-test-id="authors-list"]')
+                authors = authors_elem.text.strip() if authors_elem else ''
+                
+                year_elem = item.select_one('[data-test-id="year"]')
+                year = year_elem.text.strip() if year_elem else ''
+                
+                abstract_elem = item.select_one('[data-test-id="abstract-text"]')
+                abstract = abstract_elem.text.strip() if abstract_elem else ''
+                
+                doi_elem = item.select_one('[data-test-id="doi-link"]')
+                doi = doi_elem.text.strip() if doi_elem else ''
+                
+                articles.append({
+                    'title': title,
+                    'authors': authors,
+                    'year': year,
+                    'abstract': abstract,
+                    'doi': doi,
+                    'type': 'article',
+                    'source': 'Semantic Scholar'
+                })
+            
+            return articles
+            
+        except Exception as e:
+            print(f"Error al scrapear Semantic Scholar: {str(e)}")
+            return []
+
+    @staticmethod
+    def scrape_google_scholar(query: str) -> List[Dict[str, Union[str, List[str]]]]:
+        """Scraping de Google Scholar"""
+        print(f"Scrapeando Google Scholar para: {query}")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        url = f"https://scholar.google.com/scholar?hl=en&q={query}"
+        
+        try:
+            response = requests.get(url, headers=headers)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            articles = []
+            for item in soup.select('.gs_r.gs_or.gs_scl'):
+                title_elem = item.select_one('.gs_rt')
+                title = title_elem.text.strip() if title_elem else ''
+                
+                authors_elem = item.select_one('.gs_a')
+                authors = authors_elem.text.strip() if authors_elem else ''
+                
+                # Extraer año de la línea de autores
+                year = ''
+                if authors_elem:
+                    year_match = re.search(r'\b(19|20)\d{2}\b', authors_elem.text)
+                    if year_match:
+                        year = year_match.group()
+                
+                abstract_elem = item.select_one('.gs_rs')
+                abstract = abstract_elem.text.strip() if abstract_elem else ''
+                
+                # En Google Scholar no siempre hay DOI disponible
+                doi = ''
+                
+                articles.append({
+                    'title': title,
+                    'authors': authors,
+                    'year': year,
+                    'abstract': abstract,
+                    'doi': doi,
+                    'type': 'article',
+                    'source': 'Google Scholar'
+                })
+            
+            return articles
+            
+        except Exception as e:
+            print(f"Error al scrapear Google Scholar: {str(e)}")
+            return []
+
+    @staticmethod
+    def scrape_pubmed(query: str) -> List[Dict[str, Union[str, List[str]]]]:
+        """Scraping de PubMed"""
+        print(f"Scrapeando PubMed para: {query}")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        url = f"https://pubmed.ncbi.nlm.nih.gov/?term={query}"
+        
+        try:
+            response = requests.get(url, headers=headers)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            articles = []
+            for item in soup.select('.article-overview'):
+                title_elem = item.select_one('.docsum-title')
+                title = title_elem.text.strip() if title_elem else ''
+                
+                authors_elem = item.select_one('.docsum-authors')
+                authors = authors_elem.text.strip() if authors_elem else ''
+                
+                journal_elem = item.select_one('.docsum-journal-citation')
+                journal_info = journal_elem.text.strip() if journal_elem else ''
+                
+                # Extraer año de la información del journal
+                year = ''
+                year_match = re.search(r'\b(19|20)\d{2}\b', journal_info)
+                if year_match:
+                    year = year_match.group()
+                
+                abstract_elem = item.select_one('.full-view-snippet')
+                abstract = abstract_elem.text.strip() if abstract_elem else ''
+                
+                doi_elem = item.select_one('.id-link')
+                doi = doi_elem.text.strip() if doi_elem else ''
+                
+                articles.append({
+                    'title': title,
+                    'authors': authors,
+                    'year': year,
+                    'abstract': abstract,
+                    'doi': doi,
+                    'journal': journal_info,
+                    'type': 'article',
+                    'source': 'PubMed'
+                })
+            
+            return articles
+            
+        except Exception as e:
+            print(f"Error al scrapear PubMed: {str(e)}")
+            return []
+
+    @staticmethod
+    def scrape_uniquindio_databases(query: str) -> List[Dict[str, Union[str, List[str]]]]:
+        """Scraping para las bases de datos de la Universidad del Quindío"""
+        print(f"Scrapeando bases de datos de la Universidad del Quindío para: {query}")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        # URL base del portal de bases de datos
+        base_url = "https://library.uniquindio.edu.co/databases"
+        
+        try:
+            # Primero obtenemos la lista de bases de datos disponibles
+            response = requests.get(base_url, headers=headers)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Aquí necesitarías identificar los enlaces a las bases de datos específicas
+            # Este es un ejemplo genérico que necesitaría ajustarse según la estructura real
+            db_links = soup.select('.database-link')
+            
+            articles = []
+            for link in db_links[:3]:  # Limitar a 3 bases para ejemplo
+                db_name = link.text.strip()
+                db_url = link['href']
+                
+                print(f"Accediendo a {db_name}...")
+                
+                # Simulamos acceso a una base de datos específica
+                # En la práctica, necesitarías implementar el scraping específico para cada base
+                time.sleep(2)
+                
+                # Ejemplo genérico de resultados
+                articles.append({
+                    'title': f"Ejemplo de artículo sobre {query} en {db_name}",
+                    'authors': "Autor1, Autor2",
+                    'year': "2023",
+                    'abstract': f"Este es un ejemplo de abstract sobre {query} encontrado en {db_name}",
+                    'doi': "10.1234/example.doi",
+                    'type': 'article',
+                    'source': f"Uniquindio DB: {db_name}"
+                })
+            
+            return articles
+            
+        except Exception as e:
+            print(f"Error al scrapear bases de datos de Uniquindio: {str(e)}")
             return []
 
     @staticmethod
@@ -273,17 +472,30 @@ class BibliographicUnifier:
     def scrape_and_load(self, query: str, database_urls: Dict[str, str]) -> None:
         """Realiza scraping de múltiples bases de datos y carga los datos"""
         for db_name, url in database_urls.items():
-            if db_name.lower() == 'scopus':
-                articles = DatabaseScraper.scrape_scopus(query)
-            elif db_name.lower() == 'sciencedirect':
-                articles = DatabaseScraper.scrape_sciencedirect(query)
-            else:
-                articles = DatabaseScraper.scrape_database(url, query, db_name)
-            
-            for article in articles:
-                self.add_entry(article, db_name)
-            
-            time.sleep(2)
+            try:
+                if db_name.lower() == 'scopus':
+                    articles = DatabaseScraper.scrape_scopus(query)
+                elif db_name.lower() == 'sciencedirect':
+                    articles = DatabaseScraper.scrape_sciencedirect(query)
+                elif db_name.lower() == 'semantic scholar':
+                    articles = DatabaseScraper.scrape_semantic_scholar(query)
+                elif db_name.lower() == 'google scholar':
+                    articles = DatabaseScraper.scrape_google_scholar(query)
+                elif db_name.lower() == 'pubmed':
+                    articles = DatabaseScraper.scrape_pubmed(query)
+                elif db_name.lower() == 'uniquindio':
+                    articles = DatabaseScraper.scrape_uniquindio_databases(query)
+                else:
+                    articles = DatabaseScraper.scrape_database(url, query, db_name)
+                
+                for article in articles:
+                    self.add_entry(article, db_name)
+                
+                time.sleep(2)  # Espera para evitar bloqueos
+                
+            except Exception as e:
+                print(f"Error al procesar {db_name}: {str(e)}")
+                continue
     
     def export_to_ris(self, entries: List[Dict], filename: str) -> None:
         """Exporta entradas a formato RIS"""
@@ -440,7 +652,10 @@ def main():
     database_urls = {
         'Scopus': 'https://www.scopus.com/results/results.uri?query={query}',
         'ScienceDirect': 'https://www.sciencedirect.com/search?qs={query}',
-        'ACM': 'https://dl.acm.org/action/doSearch?AllField={query}'
+        'Semantic Scholar': 'https://www.semanticscholar.org/search?q={query}',
+        'Google Scholar': 'https://scholar.google.com/scholar?q={query}',
+        'PubMed': 'https://pubmed.ncbi.nlm.nih.gov/?term={query}',
+        'Uniquindio': 'https://library.uniquindio.edu.co/databases'
     }
     
     output_format = input("Formato de salida (RIS/BibTeX): ").strip().lower()
@@ -477,5 +692,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
