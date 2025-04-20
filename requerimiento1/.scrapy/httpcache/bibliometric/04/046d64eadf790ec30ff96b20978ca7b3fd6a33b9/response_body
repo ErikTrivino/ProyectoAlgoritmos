@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html DIR="LTR">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://scholar.google.es/scholar?start=100&amp;q=computational+thinking&amp;hl=es&amp;as_sdt=0,5</title></head>
+<body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('captcha');if(e){e.focus();} if(solveSimpleChallenge) {solveSimpleChallenge(0,0);}">
+<div style="max-width:400px;">
+<hr noshade size="1" style="color:#ccc; background-color:#ccc;"><br>
+<form id="captcha-form" action="index" method="post">
+<noscript>
+<div style="font-size:13px;">
+Para continuar, habilita JavaScript en tu navegador web.
+</div>
+</noscript>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>var submitCallback = function(response) {document.getElementById('captcha-form').submit();};</script>
+<div id="recaptcha" class="g-recaptcha" data-sitekey="6LfwuyUTAAAAAOAmoS0fdqijC2PbbdH4kjq62Y1b" data-callback="submitCallback" data-s="pmqY5S-ddU8eMlQeAadk-dg7owuE1-uodfwaQ4WKfjznekyUfaiGT2B6RXcjrmXvxPqCCVF82UzT821yKnykSWV-eYcAjMU4uq4G_7uvJBOksGeCumDHYzal6k8vRg5ghqZIdwDG_sAHyFrhhN_qNCYsxVkcVysfnUJhfNe4fNhABBhXLg5t00ZztCxa2kc7A5pLlTi4-FlSDdHo0K7foo2ntXMonzA7l7oW0inY4GcMeCd4PY57Ae4e8QqcJsJRWaH0uZIPmbkwiHQ8mV_Z4749"></div>
+
+<input type='hidden' name='q' value='EgS1iWnoGILJlMAGIixXgRRB18qXYmzpFfNyTT1uIirpSjWV6naKvMUgWJi1-Hq1jXq3AhJL52ciJzICclJaAUM'><input type="hidden" name="continue" value="https://scholar.google.es/scholar?start=100&amp;q=computational+thinking&amp;hl=es&amp;as_sdt=0,5">
+</form>
+<hr noshade size="1" style="color:#ccc; background-color:#ccc;">
+<div style="font-size:13px; line-break: anywhere;">
+<b>Acerca de esta página</b><br><br>
+
+Nuestros sistemas han detectado tráfico inusual procedente de tu red de ordenadores. En esta página se comprueba si eres tú quien envía las solicitudes en lugar de un robot. <a href="#" onclick="document.getElementById('infoDiv').style.display='block';">¿A qué se debe esto?</a><br><br>
+
+<div id="infoDiv" style="display:none; background-color:#eee; padding:10px; margin:0 0 15px 0; line-height:1.4em;">
+Esta página aparece cuando Google detecta automáticamente solicitudes procedentes de tu red de ordenadores que parecen infringir las <a href="//www.google.com/policies/terms/">Condiciones del servicio</a>. El bloqueo caducará poco después de que se detengan esas solicitudes. Mientras tanto, si solucionas la prueba CAPTCHA de arriba, podrás seguir utilizando nuestros servicios.<br><br>Es posible que este tráfico proceda de software malintencionado, de un complemento del navegador o de una secuencia de comandos que envíe solicitudes automáticas. Si compartes tu conexión de red, pídele ayuda a tu administrador: puede que otro ordenador que utilice la misma dirección IP esté causando la incidencia. <a href="//support.google.com/websearch/answer/86640">Más información</a><br><br>En ocasiones, es posible que tengas que solucionar la prueba CAPTCHA si utilizas términos avanzados que emplean los robots o si envías solicitudes con gran rapidez.
+
+</div><br>
+Dirección IP: 181.137.105.232<br>Hora: 2025-04-20T16:44:57Z<br>URL: https://scholar.google.es/scholar?start=100&amp;q=computational+thinking&amp;hl=es&amp;as_sdt=0,5<br>
+</div></div>
+</body>
+</html>

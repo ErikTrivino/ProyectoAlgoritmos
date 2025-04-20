@@ -1,0 +1,19 @@
+Referrer-Policy: origin
+Content-Type: text/html; charset=utf-8
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Server: envoy
+Uri: /**
+X-Trace-Id: a1ed0c34ce1a82c8669db57a9a1dafce
+Content-Security-Policy-Report-Only: default-src 'self' https://researcher-shared-search-ui.devqa.ebsco-assets.com https://researcher-shared-search-ui.live.ebsco-assets.com http://localhost:12345 http://localhost:3030 https://fonts.gstatic.com/ https://cmp.osano.com https://*.siteintercept.qualtrics.com https://*.sentry.io; script-src 'unsafe-eval' https://researcher-shared-search-ui.devqa.ebsco-assets.com/static/ https://researcher-shared-search-ui.live.ebsco-assets.com/static/ https://browser.sentry-cdn.com https://js.sentry-cdn.com https://*.sentry.io https://polyfill-fastly.io/ https://siteintercept.qualtrics.com https://*.siteintercept.qualtrics.com https://cdn.speedcurve.com https://lux.speedcurve.com https://cmp.osano.com 'sha256-EAt9nlNCOENB1JlCzSNWi1S0fhHMAEQfW1SUjAEiAzM=' 'sha256-q7cJjDqNO2e1L5UltvJ1LhvnYN7yJXgGO7b6h9xkL1o=' https://siteintercept.qualtrics.com https://zn7wpimtllrvuw68d-ebsco.siteintercept.qualtrics.com; style-src 'self' 'unsafe-inline' https://researcher-shared-search-ui.devqa.ebsco-assets.com/static/_next/static/css/ https://researcher-shared-search-ui.live.ebsco-assets.com/static/_next/static/css/ https://fonts.googleapis.com/css; img-src 'self' data: http://imagesrvr.epnet.com/embimages/ https://image-handler.ehost-devqa.eislz.com https://image-handler.ehost-live.eislz.com/ https://placebear.com https://researcher-shared-search-ui.devqa.ebsco-assets.com/static/_next/static/media/ https://researcher-shared-search-ui.live.ebsco-assets.com/static/_next/static/media/ https://rps2images.ebscohost.com/ https://contentcafe2.btol.com https://siteintercept.qualtrics.com https://largecontent.ebsco-content.com https://cfvod.kaltura.com https://lux.speedcurve.com; manifest-src 'self' http://*.eks.ehost-devqa.eislz.com/ https://*.eks.ehost-devqa.eislz.com/ http://*.ehost-live.eislz.com/ https://*.ehost-live.eislz.com/ https://auth.devqa.ebsco.zone https://auth.ebsco.zone; font-src 'self' https://ui-assets.ebsco.com https://ui-assets.live.ebsco-assets.com; connect-src 'self' sentry.io *.sentry.io https://api.amplitude.com https://api.lab.amplitude.com https://staging-telemetry.ebsco.com/public/2/form-data https://researcher-shared-search-ui.devqa.ebsco-assets.com/static/_next/static/css/ https://researcher-shared-search-ui.live.ebsco-assets.com/static/_next/static/css/ https://telemetry.ebsco.com https://*.telemetry.ebsco.com http://autocomplete-dev.epnet.com https://*.ac.ebsco-content.com cdn.speedcurve.com https://cmp.osano.com https://siteintercept.qualtrics.com https://tattle.api.osano.com/ https://consent.api.osano.com/record https://content.ebscohost.com/ https://staging-lti.ebsco.com https://lti.ebsco.com https://autocompleteservice-ehost-devqa-external.ehost-devqa.eislz.com/; object-src 'none'; worker-src 'self' blob: https://researcher-shared-search-ui.devqa.ebsco-assets.com https://researcher-shared-search-ui.live.ebsco-assets.com
+Via: 1.1 varnish, 1.1 varnish
+X-Envoy-Upstream-Service-Time: 629
+X-Request-Id: d539fe88-2878-46d5-aa10-51255c21ef19
+Set-Cookie: affiliation=eyJjdXN0b21lciI6Im5zMDA0MzYzIiwiZ3JvdXAiOiJtYWluIn0=; Path=/; HttpOnly
+Set-Cookie: LTIUserType=; Path=/; Partitioned; Secure; SameSite=None
+Date: Sun, 20 Apr 2025 17:48:09 GMT
+X-Served-By: cache-mia-kmia1760064-MIA, cache-mia-kmia1760064-MIA
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1745171289.028120,VS0,VE936
+Strict-Transport-Security: max-age=300
+Accept-Ranges: none
