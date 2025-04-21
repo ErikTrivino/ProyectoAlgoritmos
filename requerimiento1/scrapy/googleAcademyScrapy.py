@@ -74,7 +74,8 @@ class BibliometricSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(BibliometricSpider, self).__init__(*args, **kwargs)
         while True:
-            choice = input("Selecciona formato de exportación (RIS/BibTeX): ").strip().lower()
+            #choice = input("Selecciona formato de exportación (RIS/BibTeX): ").strip().lower()
+            choice = 'ris'
             if choice in ['ris', 'bibtex']:
                 self.export_format = choice
                 break
@@ -150,7 +151,7 @@ class BibliometricSpider(scrapy.Spider):
                     yield scrapy.Request(response.urljoin(next_url.group(1)), callback=self.parse)
 
     def closed(self, reason):
-        filename = f"resultados.{self.export_format}"
+        filename = f"resultadosGoogleAcademy.{self.export_format}"
         with open(filename, "w", encoding="utf-8") as f:
             for item in self.items:
                 if self.export_format == 'ris':

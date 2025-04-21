@@ -78,16 +78,34 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
         
         # Configure Selenium
         chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--disable-gpu')
+        #chrome_options.add_argument('--headless=new')  # Ejecuta sin ventana, NO SIRVE
+        #chrome_options.add_argument('--disable-gpu') solo estaba esto 
+        # 🕵️‍♂️ Evasión de detección
+        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+        chrome_options.add_experimental_option('useAutomationExtension', False)
+
+        # 📺 Invisibilidad sin headless (mueve la ventana fuera de la pantalla)
+        chrome_options.add_argument('--window-position=-10000,0')  # Fuera del área visible
+        chrome_options.add_argument('--start-maximized')           # Maximiza (aunque no se vea)
+        chrome_options.add_argument('--disable-gpu')               # Evita errores gráficos
         self.driver = webdriver.Chrome(options=chrome_options)
-        
+        # Ejecuta este script JS para ocultar `navigator.webdriver`
+        self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+            "source": """
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined
+                });
+            """
+        })
         # Credentials
         self.correo = "erikp.trivinog@uqvirtual.edu.co"
         self.password = "Erikpablot18"
         
         # Ask for export format
         while True:
-            choice = input("Selecciona formato de exportación (RIS/BibTeX): ").strip().lower()
+            #choice = input("Selecciona formato de exportación (RIS/BibTeX): ").strip().lower()
+            choice = 'ris'
             if choice in ['ris', 'bibtex']:
                 self.export_format = choice
                 break
@@ -244,7 +262,7 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
             print("No items were collected.")
             return
 
-        filename = f"resultados.{self.export_format}"
+        filename = f"resultadosBibliotecaCrai.{self.export_format}"
         with open(filename, "w", encoding="utf-8") as f:
             for item in self.items:
                 if self.export_format == 'ris':

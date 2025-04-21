@@ -44,15 +44,31 @@ class IEEEXploreSpider(scrapy.Spider):
         super(IEEEXploreSpider, self).__init__(*args, **kwargs)
         
         chrome_options = Options()
-        chrome_options.add_argument("--window-size=1920,1080")
+        #chrome_options.add_argument('--headless=new')  # Ejecuta sin ventana. NO SIRVE
+
+        chrome_options.add_argument("--window-size=1200,700")
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option("useAutomationExtension", False)
+
+        chrome_options.add_argument('--window-position=-10000,0')  # Mueve la ventana fuera de la pantalla
+        chrome_options.add_argument('--start-maximized')
+        chrome_options.add_argument('--disable-gpu')
+        #chrome_options.add_argument('--disable-blink-features=AutomationControlled')  # Oculta propiedades de automatización
         
         self.driver = webdriver.Chrome(options=chrome_options)
+        # Ejecuta este script JS para ocultar `navigator.webdriver`
+        self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+            "source": """
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined
+                });
+            """
+        })
         
         while True:
-            choice = input("Selecciona formato de exportación (RIS/BibTeX): ").strip().lower()
+            #choice = input("Selecciona formato de exportación (RIS/BibTeX): ").strip().lower()
+            choice = 'ris'
             if choice in ['ris', 'bibtex']:
                 self.export_format = choice
                 break
@@ -147,7 +163,10 @@ class IEEEXploreSpider(scrapy.Spider):
         
 
         
-        source = selector.xpath('//div[contains(@class, "doc-abstract-conference")]//text()').get()
+        #source = selector.xpath('//div[contains(@class, "doc-abstract-conference")]//text()').get()
+        source = selector.xpath(
+    '/html/body/div[5]/div/div/div[4]/div/xpl-root/main/div/xpl-document-details/div/div[1]/div/div[2]/section/div[2]/div/xpl-document-abstract/section/div[2]/div[3]/div[2]/div[3]/text()'
+).get()
         
         # 4. Crear ítem con todos los datos
         loader = ItemLoader(PaperItem())
@@ -158,7 +177,10 @@ class IEEEXploreSpider(scrapy.Spider):
         # Si encontramos un año válido, lo agregamos al item loader
         if year_match:
             loader.add_value('year', year_match.group())
-        loader.add_value('source', source.strip() if source else '')
+        #loader.add_value('source', source.strip() if source else '')
+        # Si se encuentra texto válido, se agrega al item loader como 'source'
+        if source and source.strip():
+            loader.add_value('source', source.strip())
         loader.add_value('publisher', 'IEEE')
         loader.add_value('abstract', abstract_text)
         loader.add_value('url', response.meta['original_url'])
@@ -198,7 +220,7 @@ class IEEEXploreSpider(scrapy.Spider):
 
     def closed(self, reason):
         self.driver.quit()
-        filename = f"resultados_completos.{self.export_format}"
+        filename = f"resultadosIeeexplore.{self.export_format}"
         with open(filename, "w", encoding="utf-8") as f:
             for item in self.items:
                 if self.export_format == 'ris':
