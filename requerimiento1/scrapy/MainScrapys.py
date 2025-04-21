@@ -1,14 +1,13 @@
 import subprocess
 import os
 from datetime import datetime
-from rispy import load  # Para leer archivos RIS existentes
 
 def ejecutar_spiders():
     """Ejecuta todos los spiders de Scrapy"""
     spiders = [
         'bibliotecaCraiScrapy.py',
         'googleAcademyScrapy.py',
-        'iiExploreScrapy.py'
+        'ieeeXploreScrapy.py'
     ]
     
     print("\n=== EJECUTANDO SPIDERS ===")
@@ -21,15 +20,87 @@ def ejecutar_spiders():
             print(f" Error en {spider}: {e}")
     print("\n Todos los spiders completados")
 
+def parsear_ris(contenido: str) -> list:
+    """Parsea manualmente el contenido RIS con manejo robusto"""
+    registros = []
+    registro_actual = {}
+    
+    for linea in contenido.split('\n'):
+        linea = linea.strip()
+        if not linea:
+            continue
+        
+        # Fin de registro
+        if linea.startswith('ER  -'):
+            if registro_actual:
+                registros.append(registro_actual)
+                registro_actual = {}
+            continue
+        
+        # Líneas de datos (formato: "XX  - valor")
+        if len(linea) >= 6 and linea[2:6] == '  - ':
+            campo = linea[:2].strip()
+            valor = linea[6:].strip()
+            
+            # Mapeo completo de campos
+            if campo == 'TY':
+                registro_actual['type'] = valor
+            elif campo == 'TI':
+                registro_actual['title'] = valor
+            elif campo == 'AU':
+                registro_actual.setdefault('authors', []).append(valor)
+            elif campo == 'PY':
+                registro_actual['year'] = valor
+            elif campo in ['JF', 'JO', 'T2']:
+                registro_actual['journal'] = valor
+            elif campo == 'PB':
+                registro_actual['publisher'] = valor
+            elif campo in ['AB', 'N2']:
+                registro_actual['abstract'] = valor
+            elif campo == 'UR':
+                registro_actual['url'] = valor
+            elif campo == 'DO':
+                registro_actual['doi'] = valor
+            elif campo == 'KW':
+                registro_actual.setdefault('keywords', []).append(valor)
+            elif campo == 'VL':
+                registro_actual['volume'] = valor
+            elif campo == 'IS':
+                registro_actual['issue'] = valor
+            elif campo in ['SP', 'EP']:
+                registro_actual['pages'] = valor
+            elif campo == 'LA':
+                registro_actual['language'] = valor
+            elif campo == 'N1':
+                registro_actual['notes'] = valor
+    
+    return registros
+
 def cargar_resultados() -> list:
     """Carga y combina todos los archivos RIS generados"""
     archivos_ris = [
-        'resultadosBibliotecaCrai.ris',
-        'resultadosGoogleAcademy.ris',
-        'resultadosleeexplore.ris'
+        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultadosBibliotecaCrai.ris', 
+        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultadosGoogleAcademy.ris',
+        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultadosIeeexplore.ris'
     ]
-    
     resultados = []
+
+    
+    """for archivo in archivos_ris:
+        try:
+            with open(archivo, 'r', encoding='utf-8') as f:
+                contenido = f.read()
+                print(f"\n=== DEBUG: Contenido de {archivo} ===")
+                print(contenido[:500])  # Muestra las primeras líneas
+                
+                datos = parsear_ris(contenido)
+                print(f"\nRegistros parseados: {len(datos)}")
+                if datos:
+                    print("Ejemplo de registro:", datos[0])
+                
+                resultados.extend(datos)
+        except Exception as e:
+            print(f"Error crítico en {archivo}: {str(e)}")"""
     
     print("\n=== CARGANDO RESULTADOS ===")
     for archivo in archivos_ris:
@@ -39,7 +110,8 @@ def cargar_resultados() -> list:
             
         try:
             with open(archivo, 'r', encoding='utf-8') as f:
-                datos = load(f)
+                contenido = f.read()
+                datos = parsear_ris(contenido)
                 for item in datos:
                     # Añadir metadata de origen
                     item['fuente'] = os.path.splitext(archivo)[0]
@@ -54,14 +126,14 @@ def limpiar_datos(item: dict) -> dict:
     """Normaliza y limpia los datos del registro"""
     cleaned = {
         'title': item.get('title', '').strip(),
-        'authors': item.get('authors', ''),
+        'authors': item.get('authors', []),
         'year': str(item.get('year', '')).strip(),
         'source': item.get('journal') or item.get('source', ''),
         'publisher': item.get('publisher', ''),
-        'abstract': item.get('abstract') or item.get('summary', ''),
+        'abstract': item.get('abstract') or item.get('summary', '') or item.get('N2', ''),
         'url': item.get('url', ''),
         'doi': item.get('doi', ''),
-        'keywords': item.get('keywords', ''),
+        'keywords': item.get('keywords', []),
         'volume': item.get('volume', ''),
         'issue': item.get('issue', ''),
         'pages': item.get('pages', ''),
@@ -69,9 +141,12 @@ def limpiar_datos(item: dict) -> dict:
         'fuente': item.get('fuente', '')
     }
     
-    # Limpieza adicional de autores
+    # Convertir listas a strings
     if isinstance(cleaned['authors'], list):
-        cleaned['authors'] = '; '.join(cleaned['authors'])
+        cleaned['authors'] = '; '.join(a for a in cleaned['authors'] if a)
+    
+    if isinstance(cleaned['keywords'], list):
+        cleaned['keywords'] = '; '.join(k for k in cleaned['keywords'] if k)
     
     return cleaned
 
@@ -106,9 +181,11 @@ def generar_registro_ris(item: dict) -> str:
     
     # Manejo de autores (puede ser string o lista)
     authors = item['authors']
-    if isinstance(authors, list):
-        authors = '; '.join(authors)
-    ris += f"AU  - {authors}\n"
+    if isinstance(authors, str):
+        authors = [a.strip() for a in authors.split(';')]
+    
+    for author in authors:
+        ris += f"AU  - {author}\n"
     
     ris += f"PY  - {item['year']}\n"
     
@@ -118,7 +195,17 @@ def generar_registro_ris(item: dict) -> str:
     if item.get('abstract'): ris += f"AB  - {item['abstract']}\n"
     if item.get('url'): ris += f"UR  - {item['url']}\n"
     if item.get('doi'): ris += f"DO  - {item['doi']}\n"
-    if item.get('keywords'): ris += f"KW  - {item['keywords']}\n"
+    
+    # Manejo de keywords (puede ser string o lista)
+    if item.get('keywords'):
+        if isinstance(item['keywords'], str):
+            keywords = [k.strip() for k in item['keywords'].split(';')]
+        else:
+            keywords = item['keywords']
+        
+        for kw in keywords:
+            ris += f"KW  - {kw}\n"
+    
     if item.get('volume'): ris += f"VL  - {item['volume']}\n"
     if item.get('issue'): ris += f"IS  - {item['issue']}\n"
     if item.get('pages'): ris += f"SP  - {item['pages']}\n"
@@ -147,7 +234,7 @@ def main():
     print(" INICIO DEL PROCESO DE RECOLECCIÓN Y UNIFICACIÓN ")
     
     # Paso 1: Ejecutar todos los spiders
-    ejecutar_spiders()
+    #ejecutar_spiders()
     
     # Paso 2: Cargar y combinar resultados
     resultados = cargar_resultados()
