@@ -159,48 +159,55 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
         
         return links
 
-    def parse_article(self, response):
-        """Parse individual article page using the exact XPaths provided"""
-        loader = ItemLoader(item=PaperItem(), response=response)
-        loader.add_value('url', response.url)
+    def parse_article_page(self, selector, url):
+        """Parse an individual article page"""
+        loader = ItemLoader(PaperItem(), selector=selector)
+        loader.add_value('url', url)
+
+        # Extract title
+        title = selector.xpath('//h1[contains(@class, "title")]/text()').get()
+        loader.add_value('title', title.strip() if title else '')
 
         # Autores - Extrae todos los textos dentro de los li
-        authors = response.xpath(
+        authors = selector.xpath(
             '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[2]/li//text()'
         ).getall()
         loader.add_value('authors', [clean_text(a) for a in authors if clean_text(a)])
-
         # Source
-        source = response.xpath(
+        source = selector.xpath(
             '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[3]/li/i/text()'
         ).get()
         loader.add_value('source', clean_text(source))
 
         # Publisher
-        publisher = response.xpath(
+        publisher = selector.xpath(
             '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[4]/li//text()'
         ).get()
         loader.add_value('publisher', clean_text(publisher))
 
         # Year
-        year = response.xpath(
+        year = selector.xpath(
             '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[5]/li//text()'
         ).re_first(r'\d{4}')
         loader.add_value('year', clean_text(year))
 
         # Abstract
-        abstract = response.xpath(
+        abstract = selector.xpath(
             '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[7]/li//text()'
         ).getall()
         loader.add_value('abstract', [clean_text(a) for a in abstract])
 
+        loader.add_value('summary', [clean_text(a) for a in abstract])
+
         # Citations
-        citations = response.xpath(
+        citations = selector.xpath(
             '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[10]/li//text()'
         ).getall()
         loader.add_value('citations', ' '.join([clean_text(c) for c in citations]))
 
-        yield loader.load_item()
+        item = loader.load_item()
+        self.items.append(item)
+        yield item
 
     def ingresar_correo(self):
         """Enter email in Google login form"""

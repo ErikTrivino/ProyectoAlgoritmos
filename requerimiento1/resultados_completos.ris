@@ -1,0 +1,250 @@
+TY  - JOUR
+TI  - On Computational Tools, Computational Thinking and Computational Methods
+AU  - Xiaofeng Zhang, Hailin Zou
+PY  - 2009
+JF  - Conference Location:
+PB  - IEEE
+AB  - The appearance and innovation of computational tools depends on human thinking and initiative, and on the other hand, human thinking is affected by computational tools. The strong function of computational tools in some aspect is superior to that of human brains. It is the application of such strong function that changes the face of human society. At the same time, it presents new methods for scientific research and new perspective for solving problems, promotes human thinking to a higher level, and presents new means for people to understand and change the world. The advantage of computational tools over human brains is the speed, while the initiative ability of human brains is not owned by computational tools. Perfect combination of thinking and computing gives birth to a series of achievements, and lays the foundation of science.
+UR  - https://ieeexplore.ieee.org/document/4958823/
+ER  -
+
+TY  - JOUR
+TI  - Enhancing Computational Strategies to Decode ChatGPT's Influence on the Critical Thinking Abilities of University Students
+AU  - Gunawan, Shinta Palupi, Richki Hardi, Agung Sakti Pribadi, Riski Zulkarnain, M. Nurfalah Setiawan
+PY  - 2024
+JF  - Conference Location:
+PB  - IEEE
+AB  - The integration of artificial intelligence (AI) tools such as ChatGPT into educational contexts is reshaping the landscape of student learning and critical thinking. This study investigates the influence of ChatGPT on the critical thinking abilities of university students by enhancing computational strategies for analysis. We developed an advanced computational framework that leverages natural language processing (NLP) and machine learning (ML) techniques to evaluate the interaction between students and ChatGPT. Our approach involves the collection and analysis of large-scale interaction data to identify patterns and impacts on critical thinking development. We employed sentiment analysis, topic modeling, and argumentation mining to decode the nature of student responses and their evolution over time. The results reveal significant improvements in critical thinking skills among students who actively engage with ChatGPT, suggesting that the AI can act as a catalyst for developing higher-order thinking skills. This study contributes to the growing body of research on AI in education by providing insights into the mechanisms through which AI tools can enhance critical thinking, and proposes practical implications for integrating such tools into academic curricula. The findings support the notion that computational analysis can provide a nuanced understanding of AI's educational impacts, paving the way for more effective AI-assisted learning environments.
+UR  - https://ieeexplore.ieee.org/document/10748139/
+ER  -
+
+TY  - JOUR
+TI  - Exploration of ability development of engineering and computational thinking skills in software engineering majors
+AU  - Zhenrong Deng, Wenming Huang, Rongsheng Dong, Peizhi Wen
+PY  - 2009
+JF  - Conference Location:
+PB  - IEEE
+AB  - Software talents should have the engineering ability, a common sense in IT industry, which is characterized by the fact that design plays a very important role in software engineering. Basis on the enhancement of computational thinking, the reform ideas of the development of the student's engineering ability are introduced. The detailed approaches include: 1) Extraction of fundamental discipline concept of engineering ability development; 2) Problem solving-centered organization of courses of software development tools; 3) Initiate the courses of software engineering as soon as possible; 4) Continual training of abstract logical thinking for the purpose of software abstract thinking.
+UR  - https://ieeexplore.ieee.org/document/5228288/
+ER  -
+
+TY  - JOUR
+TI  - Performance-based evaluation of computational thinking skills using machine learning
+AU  - Elif Karakas, Meltem Turhan Yondem
+PY  - 2020
+JF  - Conference Location:
+PB  - IEEE
+AB  - This thesis study is an evaluation tool that measures the user's Computational Thinking (CT) according to its performance on Block-Based Programming Languages (BBPL) by using Machine Learning Techniques. The evaluation tool makes an evaluation for Machine Learning Model and each of the Computational Thinking seven fields. Via this developed tool, the objective is to product an alternative to the limited evaluation tools on Block-Based Programming Languages. Literature research was brought out in two sides as Machine Learning and Block-Based Programming Languages. In the first stage, on Machine Learning, the data set and the methods used in educational field were researched. In the second stage, the devices which are used to measure the performance on Block- Based Programming Languages were analyzed. On literature, there are various sources for teaching Computational Thinking ,but it occurs that measuring instruments that evaluates Computational Thinking are inadequate. To evaluate Computational Thinking a machine learning model was trained. Trained model was turned into online evaluation tool by which both the tutors and the students evaluate Computational Thinking easily. In the final stage, the developed online evaluation tool and the outcome was analyzed.
+UR  - https://ieeexplore.ieee.org/document/9247066/
+ER  -
+
+TY  - JOUR
+TI  - Mapping computational thinking mindsets between educational levels with cognitive network science
+AU  - 
+PY  - 
+JF  - 
+PB  - IEEE
+AB  - A significant aspect of computational thinking is as a way of reasoning about the world in terms of data. This mindset channels number-crunching toward an ambition to discover knowledge through logic, models and simulations. Here we show how computational cognitive science can be used to reconstruct and analyse the structure of computational thinking mindsets (forma mentis in Latin) through complex networks. As a case study, we investigate cognitive networks tied to key concepts of computational thinking provided by (i) 159 high school students enrolled in a science curriculum and (ii) 59 researchers in complex systems and simulations. Researchers' reconstructed knowledge highlighted a positive mindset about scientific modelling, semantically framing data and simulations as ways of discovering nature. Students correctly identified different aspects of logic reasoning but perceived 'computation' as a distressing, anxiety-eliciting task, framed with math jargon and lacking links to real-world discovery. Students' mindsets around 'data', 'model' and 'simulations' critically revealed no awareness of numerical modelling as a way for understanding the world. Our findings provide evidence of a crippled computational thinking mindset in students, who acquire mathematical skills that are not channelled toward real-world discovery through coding. This unlinked knowledge ends up being perceived as distressing number-crunching expertise with no relevant outcome. The virtuous mindset of researchers reported here indicates that computational thinking can be restored by training students specifically in coding, modelling and simulations in relation to discovering nature. Our approach opens innovative ways for quantifying computational thinking and enhancing its development through mindset reconstruction.
+UR  - https://ieeexplore.ieee.org/document/9684795/
+ER  -
+
+TY  - JOUR
+TI  - Computer Science Unplugged for Developing Computational Thinking and Mathematical Thinking
+AU  - Takayasu Nakamura, Tetsushi Kawasaki
+PY  - 2019
+JF  - Conference Location:
+PB  - IEEE
+AB  - The purpose of this study is to make learning material that can develop both Computational thinking and Mathematical thinking. This study suggest a hamburger flowchart as a teaching material that combines the three elements of "unplugged", "thinking from the end " and "mathematics class". Using this flowchart, basic experiment was conducted for 8 to 12 years old. The purpose of this experiment is to confirm whether it is possible for children to develop both Computational thinking and Mathematical thinking by using the hamburger flowchart. We evaluated both Computational thinking and Mathematical thinking from the state in this class and the content of the worksheet and prior and subsequent tests. As a result, the state related to Computational thinking and Mathematical thinking increased, and the correct answer rate of many children increased from the prior test to the subsequent test. Therefore it turned out that the hamburger flowchart affects mathematical thinking.
+UR  - https://ieeexplore.ieee.org/document/9066359/
+ER  -
+
+TY  - JOUR
+TI  - A practical research on the training of middle school students' computational thinking based on problem solving in systematic information process view
+AU  - Miaomiao Zhao, Weixing Hu
+PY  - 2022
+JF  - Conference Location:
+PB  - IEEE
+AB  - Computational thinking is the process sequence of solving problems and behaves a method of systematic solving problems. Computational thinking is essentially a view of systematic information processing process. In essence, developing the computational thinking of middle school students is to improve their problem-solving ability and the corresponding practical accomplishment. The instructional activity design based on six links of problem solving can well meet the need of cultivating students' computational thinking. The instructional mode of systematic problem solving in middle school can improve students' learning effects and satisfaction, and promote students' computational thinking ability significantly. The method of systematic information processing process can be trained.
+UR  - https://ieeexplore.ieee.org/document/10027412/
+ER  -
+
+TY  - JOUR
+TI  - Improving Computational Thinking Competencies in STEM Higher Education
+AU  - Nasrin Dehbozorgi, Mehdi Roopaei
+PY  - 2024
+JF  - Conference Location:
+PB  - IEEE
+AB  - Computational thinking (CT) is a key competency with a significant impact on students' academic performance in STEM fields. It empowers students to enhance problem-solving skills by decomposing problems, utilizing abstraction and pattern recognition, and employing algorithmic thinking to design solutions and build models. This is particularly important in STEM disciplines where logical reasoning is essential for addressing complex real-world challenges in academic and industrial settings. Given the increasing demand for professionals equipped with strong algorithmic thinking and problem-solving abilities in Industry 5, educational institutions are focusing on enhancing students' CT and problem-solving skills. This study presents an initiative conducted over the past two years at our institute to teach CT in a gateway course to students with different backgrounds in STEM fields. The approach involved designing specific learning modules on Abstraction, Decomposition, Pattern Recognition, and Algorithmic Thinking and integrating them into the LMS. After studying these learning modules, the students were exposed to specific assignments that required the application of related CT skills. Pre and post surveys were employed by using standard CT tests to measure the impact of the intervention on students' CT levels. The results indicated an improvement in students' perceptions of their mastery of CT. Academic course grades also showed an improvement, with increased A scores and reduced F grades post-intervention. This two-year study on improving CT skills has yielded promising results. Moving forward, the research aims to enhance the existing modules further and distribute them to a broader range of introductory-level STEM courses in other universities. This future direction aligns with the goal of expanding the impact of CT education and integrating it more widely into STEM curricula.
+UR  - https://ieeexplore.ieee.org/document/10664997/
+ER  -
+
+TY  - JOUR
+TI  - Computational thinking tools
+AU  - Alexander Repenning, Ashok Basawapatna, Nora Escherle
+PY  - 2016
+JF  - Conference Location:
+PB  - IEEE
+AB  - Computational Thinking is an essential skill for all students in the 21 st Century. A fundamental question is how can we create computer affordances to empower novice teachers and students, in a variety of STEM and art disciplines, to think computationally while avoiding difficult overhead emerging from traditional coding? Over the last 20 years we have iteratively developed tools that aim to support computational thinking. As these tools evolved a philosophy emerged to support Computational Thinking by joining human abilities with computer affordances. Chief among these findings is that supporting Computational Thinking is much more than making coding accessible. Computational Thinking Tools aim to minimize coding overhead by supporting users through three fundamental stages of the Computational Thinking development cycle: problem formulation, solution expression, and solution execution/evaluation.
+UR  - https://ieeexplore.ieee.org/document/7739688/
+ER  -
+
+TY  - JOUR
+TI  - Teaching mode reform and exploration on the University Computer Basic based on Computational thinking training in Network Environment
+AU  - Boqin Liu, Junmei He
+PY  - 2014
+JF  - Conference Location:
+PB  - IEEE
+AB  - Due to the international and domestic education and computer industries and so on computational thinking attaches great importance and has done considerable exploratory research, our school also reform and exploration teaching mode on the University Computer Basic based on Computational thinking training in network environment, and the use of based on Computational thinking Autonomous learning mode in the Network Environment in the actual teaching, strengthen the learners understanding of computer science, corrected the computing disciplines equivalent to the idea of computer programming, enhance the connotation and science significance of computer disciplines, to overcome the computer means "narrow tool" argument,and achieved good teaching results.
+UR  - https://ieeexplore.ieee.org/document/6926430/
+ER  -
+
+TY  - JOUR
+TI  - Computational Thinking & Practical Thinking Inspired Java Web Curriculum Reform Method
+AU  - Fengping Yu, Hong Wang
+PY  - 2019
+JF  - Conference Location:
+PB  - IEEE
+AB  - Both Computational thinking and Practical thinking are important concepts of great concern to the international computer community. They are also hot topics needed to be studied in education. Inspired by these two kinds of thinking, we expound how to better carry out teaching practice. The teaching process is task-oriented, teacher-led and student-centered. In the whole teaching process, teachers use the way of integrating computational thinking with practical thinking to prepare courses, design tasks and guide students to complete learning tasks. Compared with the traditional teaching mode, the teaching mode of integrating computational thinking and practical thinking has made great progress in training students' computer practical ability and innovation ability. It can not only improve learning efficiency, but also train students' computer practical ability. Finally, the feasibility and efficiency of this method are verified by Java Web course design.
+UR  - https://ieeexplore.ieee.org/document/8964889/
+ER  -
+
+TY  - JOUR
+TI  - Computational Thinking Education: Who Let the Dog Out?
+AU  - Samar Swaid, Taima Suid
+PY  - 2019
+JF  - Conference Location:
+PB  - IEEE
+AB  - Today, Computational Thinking is seen as an important competency and the fourth skill that every child should process. Several significant attempts have been made to increase a student's exposure to Computational Thinking at the K-12 level, however the process is complex and requires systematic planning and comprehensive curriculum. In this paper, we describe the STEPP-UP program that aims to introduce middle schoolers to Computational Thinking via Scratch and Java coding sessions. A comprehensive curriculum and hands-on activities are applied to introduce Computational Thinking for a total of 41 students for a period of five semesters from Fall 2017 until Fall 2019. To assess the learning objectives, we used three methods of evaluation; design-scenarios, paper-assessments, and learner-documentation. Findings indicate that the students have increased knowledge of Computational Thinking and its applications for problem solving.
+UR  - https://ieeexplore.ieee.org/document/9071265/
+ER  -
+
+TY  - JOUR
+TI  - Influence of Programming Robot Learning Mode Based on Conceptual Mapping on College Students' Computational Thinking
+AU  - Bing-Hong Chen, Ling-Hsiu Chen, Chih-Cheng Chen, Chih-Hung Chen
+PY  - 2021
+JF  - Conference Location:
+PB  - IEEE
+AB  - As the information age has progressed, computational thinking ability to solve problems has become an indispensable way of life in life. Many scholars believe that the process of solving problems will be more logical if they have computational thinking ability. At the same time, scholars believe that a good learning method improves learners' intrinsic motivation. Therefore, in this research, we try to use conceptual mapping so that students can construct knowledge when composing their own images, as the focus of this learning model and computational thinking is the thinking process and the two coincide. This research intends to introduce the traditional programming robot course into conceptual mapping and measure whether there are differences in computational thinking tendencies, problem-solving tendencies, and intrinsic motivations between students who use conceptual mapping and those who do not use it. The students in the experimental group with conceptual mapping activities developed computational thinking skills during the program robotics course. The students in the control group first watched the computational thinking explanation video to explain the computational thinking skills to the students, and then taught in the traditional programming robotics course.
+UR  - https://ieeexplore.ieee.org/document/9645630/
+ER  -
+
+TY  - JOUR
+TI  - Helping Novice Programmers to Bootstrap in the Cloud: Incorporating Support for Computational Thinking into the Game Design Process
+AU  - Navid Ahmadi, Mehdi Jazayeri, Monica Landoni
+PY  - 2012
+JF  - Conference Location:
+PB  - IEEE
+AB  - Game design environments are traditionally used as means for engaging non-programmers in the learning process. However, these environments lack specific support for teaching computational thinking to novices. Typically, such skills are acquired in ad hoc practical sessions with supervision provided by teachers or peers. The usual scenario is where a teacher guides the students in solving these problems during a game design session. In informal learning settings, step-by-step tutorials for creating existing games are used to compensate for the lack of computer support for solving design and computational problems. In this paper we suggest a game design process that combines support for computational thinking with tool usage, by identifying the most common computational thinking problems and providing a generic solution to them. We have evaluated our solution in the context of AgentWeb, an online cloud-based game design environment for novices. We discuss how to incorporate suggested computational thinking solutions as computer assistant into the game design user interface.
+UR  - https://ieeexplore.ieee.org/document/6268116/
+ER  -
+
+TY  - JOUR
+TI  - A Study of Micro:bit Teaching Design Based on the Development of Computational Thinking of Secondary School Students
+AU  - Junjie Liu, Xiaojun Xia, Yi Bai, Pingyao Liu
+PY  - 2022
+JF  - Conference Location:
+PB  - IEEE
+AB  - With the rapid development of human society and technology, it's necessary for contemporary students to have the ability to quickly adapt to social development. Meanwhile, traditional educational concepts have to be transformed in time, and a full understanding of computational thinking plays an important role in promoting students' life-long development. Based on in-depth analysis and research on computational thinking theory, this paper integrates micro: bit into teaching from the perspective of practical application. After analyzing the teaching objectives, teaching contents, and teaching process, this paper proposes an instructional design for the development of computational thinking for secondary school students.
+UR  - https://ieeexplore.ieee.org/document/9973092/
+ER  -
+
+TY  - JOUR
+TI  - Fostering Critical and Computational Thinking in the Field of Primary and Secondary Education in non-STEM Subjects by Using Data Sets and Applications
+AU  - Ines Vlahovic, Ivana Ogrizek Biskupic
+PY  - 2023
+JF  - Conference Location:
+PB  - IEEE
+AB  - Critical and computational thinking in primary and secondary education in recent years shows growing importance in methodical approaches used in the classroom. Although many examples exist for using critical and computational thinking in STEM educational area, the social sciences i.e., non-STEM areas were somehow left out due to the relatively more difficult design of such content, especially in the part of the development of computational thinking. In that context, in this paper we present one way of using critical and computational thinking in non-STEM education, more specifically on the example of historical data sources, through the use of programming in Python. As an example, we use historical data for Trans-Atlantic Slave Trade routes, that were the largest long-distance coerced movement of people in history up to the mid-nineteenth century, for connecting concepts of databases, Data Science and programming for development of critical and computational thinking in context of history science. This way of using modern approaches in classroom should give teachers and pupils a broader picture of importance of interdisciplinary education for critical and computational thinking development through STEM and non-STEM classes that give pupils novel skills needed for future labor market.
+UR  - https://ieeexplore.ieee.org/document/10159750/
+ER  -
+
+TY  - JOUR
+TI  - Improving learning of computational thinking using creative thinking exercises in CS-1 computer science courses
+AU  - L. Dee Miller, Leen-Kiat Soh, Vlad Chiriacescu, Elizabeth Ingraham, Duane F. Shell, Stephen Ramsay
+PY  - 2013
+JF  - Conference Location:
+PB  - IEEE
+AB  - Promoting computational thinking is one of the top priorities in CS education as well as in other STEM and non-STEM disciplines. Our innovative NSF-funded IC2Think project blends computational thinking with creative thinking so that students leverage their creative thinking skills to "unlock" their understanding of computational thinking. In Fall 2012, we deployed creative exercises designed to engage Epstein's creative competencies (Surrounding, Capturing, Challenging and Broadening) in introductory level CS courses targeting four different groups (CS, engineering, combined CS/physical sciences, and humanities majors). Students combined hands-on problem solving with guided analysis and reflection to connect their creative activities to CS topics such as conditionals and arrays and to real-world CS applications. Evaluation results (approximately 150 students) found that creative thinking exercise completion had a linear "dosage" effect. As students completed more exercises [0/1 - 4], they increased their long-term retention [a computational thinking test], F(3, 98) = 4.76, p =.004, partial Eta 2 = .127 and course grades, F(3, 109) = 4.32, p =.006, partial Eta 2 = .106. These findings support our belief that the addition of creative thinking exercises to CSCE courses improves the learning of computational knowledge and skills.
+UR  - https://ieeexplore.ieee.org/document/6685067/
+ER  -
+
+TY  - JOUR
+TI  - Real Time Assessment of Computational Thinking
+AU  - Kyu Han Koh, Ashok Basawapatna, Hilarie Nickerson, Alexander Repenning
+PY  - 2014
+JF  - Conference Location:
+PB  - IEEE
+AB  - This paper suggests a Cyberlearning tool based on a highly innovative assessment methodology that helps teachers with computer science education. Currently, there is a strong push to integrate aspects of programming and coding into the classroom environment. However, few if any tools exist that enable real-time formative assessment of in-class programming tasks. The proposed REACT (Real Time Evaluation and Assessment of Computational Thinking) system is a first step toward allowing teachers to see which high-level concepts students have mastered and which ones they are struggling with as students code in real time. REACT supports and facilitates the teaching of 21st century computing skills such as computational thinking [1] in the classroom environment.
+UR  - https://ieeexplore.ieee.org/document/6883021/
+ER  -
+
+TY  - JOUR
+TI  - Construction and Application of a Computational Thinking Assessment Framework from the Perspective of the Iceberg Model
+AU  - Xuchen Zhou, Wei Zhang, Shengming Wang, Hao Chen
+PY  - 2023
+JF  - Conference Location:
+PB  - IEEE
+AB  - Computational thinking assessment is an important part of testing the effectiveness of computational thinking cultivation. However, the existing computational thinking assessments still suffer from the problem of insufficient examination of non-cognitive factors, leading to the lack of validity of its assessment results. Since the iceberg model can comprehensively and deeply explore individual characteristics, this paper draws on the division idea of the model and divides computational thinking into explicit computational thinking the basic knowledge required to solve problems using computational thinking and implicit computational thinking the internal psychological characteristics of individuals in the process of using computational thinking. A comprehensive assessment framework of computational thinking is constructed, which contains five dimensions: knowledge and skills, self-efficacy, internet attitude, learning motivation, and thinking style. Finally, its application in the hierarchical teaching of computational thinking and suggestions for personalized teaching programs are given in order to promote the development of personalized education in computational thinking.
+UR  - https://ieeexplore.ieee.org/document/10496944/
+ER  -
+
+TY  - JOUR
+TI  - An Empirical Study on Blended Learning to Promote the Development of Computational Thinking Ability of College Students
+AU  - Lihua Liao, Jin Liang
+PY  - 2017
+JF  - Conference Location:
+PB  - IEEE
+AB  - Studies have shown that learning approaches are able to promote the developments of computational thinking on students, including cooperative learning, project-based learning, online communication, Academic dialogue etc. Therefore, these learning approaches can combine with the traditional teaching in a more effective way. Blended learning may promote the developments of computational thinking on students. The paper takes the junior College students as the experimental objects, and carries a pretest-posttest study through unequal experimental and control groups. It approved that blended learning has a positive impact on the college student's computational thinking, i.e., they have an obvious progress.
+UR  - https://ieeexplore.ieee.org/document/8005431/
+ER  -
+
+TY  - JOUR
+TI  - Hot Spots and Trends of Computational Thinking Research in China CiteSpace visualization and analysis based on CNKI data
+AU  - Yiwei Wang, Liancheng Xu
+PY  - 2023
+JF  - Conference Location:
+PB  - IEEE
+AB  - With the rapid development of computer technology, computational thinking, as one of the core literacy elements of information technology majors, has been widely noticed, and at the same time, it has gradually become one of the core competencies cultivated by education and teaching. This paper uses CiteSpace to visualize and analyze the Chinese core papers related to computational thinking included in CNKI. By studying the current situation of domestic research on computational thinking and related hot keywords, it aims to explore the prospects for the application of computational thinking in secondary education, try to incorporate the educational model of C elements in STEM education, and provide research ideas for the cultivation of computational thinking ability of secondary students.
+UR  - https://ieeexplore.ieee.org/document/10505497/
+ER  -
+
+TY  - JOUR
+TI  - Bringing Computational Thinking Skills Into Physics Classroom Through Project-Based Learning
+AU  - Rif'Ati Dina Handayani, Albertus Djoko Lesmono, Srihandono Budi Prastowo, Bambang Supriadi, Nila Mutia Dewi
+PY  - 2022
+JF  - Conference Location:
+PB  - IEEE
+AB  - Computational thinking is a fundamental thinking skill for students in the 21st-century learning era. This study aims to integrate computational thinking skills in physics through project-based learning. Data were gathered through observation, interviews, and portfolio documents. The results indicated three main categories of computational thinking: decomposition, abstraction, and simulation. The implementation of project-based learning can develop students' computational thinking skills. Students are trained to solve physics problems analytically and precisely in structured and logical thinking through a project. This research is expected to be the information for physics teachers to integrate computational thinking in the classroom as a 21st-century learning skill.
+UR  - https://ieeexplore.ieee.org/document/9990631/
+ER  -
+
+TY  - JOUR
+TI  - Promoting Computational Thinking Skills Through Game-Based Learning of Students in Lower Secondary School
+AU  - Siripon Saenboonsong, Akarapon Poonsawad
+PY  - 2024
+JF  - Conference Location:
+PB  - IEEE
+AB  - This study's objectives were to: 1) compare computational thinking skills before and after game-based learning activities; and 2) study students' satisfaction after game-based learning. The research methodology uses the ADDIE model by driving game-based learning activities and promoting students with computational thinking skills, including decomposition, pattern recognition, abstraction, and algorithm design. The statistical methods used to analyze the data were mean, standard deviation, and t-test. The study's findings revealed that 1) the students' computational thinking skills improved significantly after engaging in game-based learning activities, demonstrating statistical significance at the.05 level, and 2) the overall students' satisfaction after activities with game-based learning was averaged at the highest level (= 4.75, S.D. = 0.52).
+UR  - https://ieeexplore.ieee.org/document/10663178/
+ER  -
+
+TY  - JOUR
+TI  - Integrating Mathematical Thinking, Abstract Thinking, and Computational Thinking
+AU  - Kirby McMaster, Brian Rague, Nicole Anderson
+PY  - 2010
+JF  - Conference Location:
+PB  - IEEE
+AB  - In recent years, several groups of Computer Science educators have made a sustained effort to capture the essence of CS apart from programming. Three of these approaches are Mathematical Thinking, Abstract Thinking, and Computational Thinking. Each approach tries to clarify areas of CS that are not directly tied to writing computer programs. In a separate line of research, the current authors have been examining different ways to teach mathematics to CS students. We developed a Computational Math scale that measures the level of problem-solving gestalt exhibited by textbook authors. In this study, we relate our Computational Math framework to current research on Mathematical, Abstract, and Computational (MAC) Thinking. We counted words used frequently in research articles and compared them to words that form the Computational Math scale. Our results suggest an overall MAC Thinking framework that integrates a wide range of topics relevant to computing and programming.
+UR  - https://ieeexplore.ieee.org/document/5673139/
+ER  -
+
+TY  - JOUR
+TI  - The Teaching Mode and Practice Analysis of College Computer Basic Course Based on Computational Thinking
+AU  - Chen Xue, Wang Zhun
+PY  - 2020
+JF  - Conference Location:
+PB  - IEEE
+AB  - This paper mainly adopts the theory with practice, combines the computational thinking method with education and teaching, and constructs the inquiry teaching model based on computational thinking. We adopt the formal teaching model and learning model, incremental expression of computational thinking ability to improve the effect, from the computational thinking of automation, abstract characteristics of the teaching and learning model based on computational thinking formalization. Then, in the case study, the learning support technology scheme of MOOC course platform combining mobile terminal and HTML5 is designed. Through teaching practice and quantitative analysis of experimental behavior, the platform effectively avoids the interference of programming language code, which simplifies the expression and application process of algorithm thinking, and enhances students' interest and operation of programming working ability.
+UR  - https://ieeexplore.ieee.org/document/9526726/
+ER  -
+
