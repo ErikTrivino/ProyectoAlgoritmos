@@ -203,10 +203,11 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
         ).get()
         loader.add_value('publisher', clean_text(publisher))
 
-        # Year
+        # Year /html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/main/div/div/div[1]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[8]/li
         year = selector.xpath(
-            '//*[@id="details-page"]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[5]/li//text()'
+            '//*[@id="details-page"]/div[2]/div/div/div[2]/div[2]/div[2]/div/main/div/div/div[1]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[8]/li//text()'
         ).re_first(r'\d{4}')
+        
         loader.add_value('year', clean_text(year))
 
         # Abstract
