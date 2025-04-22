@@ -153,61 +153,65 @@ class Visualizer:
     """Clase para visualización mejorada"""
     @staticmethod
     def plot_clusters(vectors: np.ndarray, clusters: List[int], titles: List[str]):
-        """Visualización 2D mejorada con colores y anotaciones"""
-        # Reducción de dimensionalidad mejorada
+        """Visualización 2D con títulos representativos en la leyenda"""
         reduced = Visualizer._pca_reduction(vectors)
         
-        plt.figure(figsize=(14, 10))
-        plt.style.use('ggplot')  # Puedes usar también 'seaborn-v0_8', 'seaborn', 'fivethirtyeight', etc.
-        
-        # Configuración de colores y estilos
-        #unique_clusters = sorted(set(clusters))
-        #colors = plt.cm.tab20(np.linspace(0, 1, len(unique_clusters)))
-        # Configuración de colores y estilos
+        plt.figure(figsize=(16, 12))
+        plt.style.use('seaborn-v0_8-darkgrid')
+
         unique_clusters = sorted(set(clusters))
-        colors = plt.cm.tab20(np.linspace(0, 1, len(unique_clusters)))
+        colors = plt.cm.nipy_spectral(np.linspace(0, 1, len(unique_clusters)))
         
-        # Dibujar cada cluster
+        # Prepara información para la leyenda
+        legend_info = []
+        
         for cluster, color in zip(unique_clusters, colors):
             mask = np.array(clusters) == cluster
-            cluster_size = sum(mask)
+            cluster_indices = np.where(mask)[0]
+            cluster_vectors = reduced[cluster_indices]
             
-            # Tamaño del punto según el tamaño del cluster
-            size = 50 + 450 * (cluster_size / len(clusters))
+            # Encuentra el artículo más cercano al centroide (más representativo)
+            centroid = np.mean(cluster_vectors, axis=0)
+            distances = np.linalg.norm(cluster_vectors - centroid, axis=1)
+            closest_idx = cluster_indices[np.argmin(distances)]
+            representative_title = titles[closest_idx][:50] + "..." if len(titles[closest_idx]) > 50 else titles[closest_idx]
             
+            # Dibuja los puntos
             plt.scatter(
-                reduced[mask, 0], 
-                reduced[mask, 1],
-                color=color,
-                label=f'Grupo {cluster} ({cluster_size} artículos)',
-                alpha=0.7,
-                s=size,
-                edgecolors='w',
-                linewidth=0.5
+                reduced[mask, 0], reduced[mask, 1],
+                c=[color],
+                label=f'Grupo {cluster}: {representative_title}',
+                alpha=0.85,
+                s=100,
+                edgecolor='white',
+                linewidth=1.5,
+                zorder=2
             )
             
-            # Anotar los títulos más representativos
-            if cluster_size > 0:
-                # Encontrar el artículo más central
-                cluster_indices = np.where(mask)[0]
-                cluster_vectors = reduced[cluster_indices]
-                centroid = np.mean(cluster_vectors, axis=0)
-                distances = np.linalg.norm(cluster_vectors - centroid, axis=1)
-                closest_idx = cluster_indices[np.argmin(distances)]
-                
+            # Añade anotación solo si el grupo es relevante
+            if len(cluster_indices) >= max(1, 0.05 * len(clusters)):
                 plt.annotate(
-                    f"{titles[closest_idx][:25]}...", 
-                    (reduced[closest_idx, 0], reduced[closest_idx, 1]),
+                    f"Gr. {cluster}", 
+                    xy=(centroid[0], centroid[1]),
+                    xytext=(10, 10),
+                    textcoords='offset points',
                     fontsize=9,
-                    bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", lw=0.5, alpha=0.8),
-                    ha='center'
+                    bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="black", alpha=0.9)
                 )
         
-        plt.title('Agrupamiento de Artículos por Similitud de Abstracts', fontsize=14, pad=20)
-        plt.xlabel('Componente Principal 1', fontsize=12)
-        plt.ylabel('Componente Principal 2', fontsize=12)
-        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-        plt.grid(True, alpha=0.2)
+        # Personaliza la leyenda
+        plt.legend(
+            bbox_to_anchor=(1.35, 1),
+            loc='upper left',
+            frameon=True,
+            shadow=True,
+            title="Leyenda de Grupos (Título Representativo)",
+            title_fontsize=12,
+            fontsize=10,
+            labelspacing=1.2
+        )
+        
+        plt.title('Agrupamiento Temático de Artículos', fontsize=18)
         plt.tight_layout()
         return plt
     
