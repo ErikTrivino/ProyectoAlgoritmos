@@ -286,11 +286,11 @@ class ReportGenerator:
 
 def main():
     # Configuración inicial
-    ris_file = 'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultados_unificados_20250421_125021.ris'
-    output_dir = 'resultados_analisis'
+    ris_file = 'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento1/resultados_unificados.ris'
+    output_dir = 'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento5'
     os.makedirs(output_dir, exist_ok=True)
     
-    # 1. Cargar y preparar datos
+     # 1. Cargar y preparar datos
     print("📂 Iniciando análisis...")
     analyzer = RISAnalyzer(ris_file)
     analyzer.load_and_preprocess_data()
@@ -308,12 +308,12 @@ def main():
         similarity_analyzer.clusters,
         analyzer.titles
     )
-    cluster_plot.savefig(f'{output_dir}/clusters.png', dpi=300, bbox_inches='tight')
+    cluster_plot.savefig(os.path.join(output_dir, 'clusters.png'), dpi=300, bbox_inches='tight')
     cluster_plot.close()
     
     # Matriz de similitud
     matrix_plot = Visualizer.plot_similarity_matrix(similarity_analyzer.similarity_matrix)
-    matrix_plot.savefig(f'{output_dir}/similarity_matrix.png', dpi=300)
+    matrix_plot.savefig(os.path.join(output_dir, 'similarity_matrix.png'), dpi=300)
     matrix_plot.close()
     
     # 4. Generar reporte
@@ -325,7 +325,7 @@ def main():
         similarity_analyzer.similarity_matrix
     )
     
-    with open(f'{output_dir}/reporte_detallado.json', 'w', encoding='utf-8') as f:
+    with open(os.path.join(output_dir, 'reporte_detallado.json'), 'w', encoding='utf-8') as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
     
     # 5. Resultados

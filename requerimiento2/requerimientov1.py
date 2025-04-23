@@ -271,15 +271,18 @@ class BibliometricAnalyzer:
             plt.savefig(f"{output_dir}/top_publishers_{timestamp}.png")
             plt.close()
     
-    def export_results(self, output_dir='output'):
-        """Exporta todos los resultados a archivos"""
+    def export_results(self, output_dir=None):
+        """Exporta todos los resultados a archivos JSON y visualizaciones"""
+        # Si no se especifica directorio, usar carpeta 'resultados' en la raíz del proyecto
+        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento2"
         os.makedirs(output_dir, exist_ok=True)
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        # Generar visualizaciones
+
+        # Generar visualizaciones (se guardan en output_dir)
         self.generate_visualizations(output_dir)
-        
-        # Exportar datos estadísticos
+
+        # Exportar datos estadísticos a JSON
         results_data = {
             'metadata': {
                 'source_file': self.unified_file_path,
@@ -292,46 +295,27 @@ class BibliometricAnalyzer:
             'top_journals': self.results['top_journals'].to_dict() if self.results['top_journals'] is not None else None,
             'top_publishers': self.results['top_publishers'].to_dict() if self.results['top_publishers'] is not None else None
         }
-        
-        # Guardar como JSON
-        with open(f"{output_dir}/bibliometric_stats_{timestamp}.json", 'w', encoding='utf-8') as f:
+        json_path = os.path.join(output_dir, f"bibliometric_stats_{timestamp}.json")
+        with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(results_data, f, indent=2)
-        
-        # Guardar como Excel
-        with pd.ExcelWriter(f"{output_dir}/bibliometric_stats_{timestamp}.xlsx") as writer:
-            if self.results['top_authors'] is not None:
-                self.results['top_authors'].to_frame('Publicaciones').to_excel(writer, sheet_name='Top Autores')
-            
-            if self.results['publications_by_year_type'] is not None:
-                self.results['publications_by_year_type'].to_excel(writer, sheet_name='Pub por Año-Tipo')
-            
-            if self.results['publication_types'] is not None:
-                self.results['publication_types'].to_frame('Publicaciones').to_excel(writer, sheet_name='Tipos de Pub')
-            
-            if self.results['top_journals'] is not None:
-                self.results['top_journals'].to_frame('Publicaciones').to_excel(writer, sheet_name='Top Journals')
-            
-            if self.results['top_publishers'] is not None:
-                self.results['top_publishers'].to_frame('Publicaciones').to_excel(writer, sheet_name='Top Publishers')
-        
+
+        # Devolver rutas
         return {
-            'json_file': f"{output_dir}/bibliometric_stats_{timestamp}.json",
-            'excel_file': f"{output_dir}/bibliometric_stats_{timestamp}.xlsx",
+            'json_file': json_path,
             'visualizations': [
-                f"{output_dir}/top_authors_{timestamp}.png",
-                f"{output_dir}/publications_by_year_type_{timestamp}.png",
-                f"{output_dir}/publication_types_{timestamp}.png",
-                f"{output_dir}/top_journals_{timestamp}.png",
-                f"{output_dir}/top_publishers_{timestamp}.png"
+                os.path.join(output_dir, fn) for fn in os.listdir(output_dir)
+                if fn.endswith(f"_{timestamp}.png")
             ]
         }
+
 
 def main():
     print("=== Analizador Bibliométrico - Requerimiento 2 ===")
     print("Este script genera estadísticas a partir del archivo unificado\n")
     
     # Configuración
-    unified_file = input("Ruta al archivo unificado (RIS o BibTeX): ").strip()
+    #unified_file = input("Ruta al archivo unificado (RIS o BibTeX): ").strip()
+    unified_file = 'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento1/resultados_unificados.ris'
     while not os.path.exists(unified_file):
         print("Archivo no encontrado. Intente nuevamente.")
         unified_file = input("Ruta al archivo unificado (RIS o BibTeX): ").strip()
@@ -345,19 +329,20 @@ def main():
     analyzer.calculate_statistics()
     
     # Exportar resultados
+        # ...
     print("\nGenerando reportes y visualizaciones...")
     output_files = analyzer.export_results()
-    
+
     # Mostrar resumen
     print("\n=== Proceso completado ===")
     print(f"Archivo de entrada: {unified_file}")
     print(f"Total de publicaciones procesadas: {len(analyzer.df)}")
     print("\nArchivos generados:")
     print(f"- Reporte JSON: {output_files['json_file']}")
-    print(f"- Reporte Excel: {output_files['excel_file']}")
     print("\nVisualizaciones generadas:")
     for viz in output_files['visualizations']:
         print(f"- {viz}")
+
 
 if __name__ == "__main__":
     main()

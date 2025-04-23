@@ -11,6 +11,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import re
 import time
 import random
+import os
 
 def clean_text(text):
     return unidecode(text.strip()) if text else ''
@@ -219,14 +220,27 @@ class IEEEXploreSpider(scrapy.Spider):
             yield scrapy.Request(next_page_url, callback=self.parse_search_results)
 
     def closed(self, reason):
+        """Export collected items when spider closes"""
+        # Cierra el driver antes de escribir el fichero
         self.driver.quit()
-        filename = f"resultadosIeeexplore.{self.export_format}"
+
+        # Directorio destino (ruta cruda para Windows)
+        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy"
+        # Construye nombre completo de archivo
+        filename = os.path.join(output_dir, f"resultadosIeeexplore.{self.export_format}")
+
+        # Asegura existencia del directorio
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Escribe el fichero
         with open(filename, "w", encoding="utf-8") as f:
             for item in self.items:
                 if self.export_format == 'ris':
                     f.write(self.to_ris(item))
                 elif self.export_format == 'bibtex':
                     f.write(self.to_bibtex(item))
+
+        # Mensajes de consola
         print(f"\nExportación completada: {filename}")
         print(f"Total de artículos procesados: {len(self.items)}")
 

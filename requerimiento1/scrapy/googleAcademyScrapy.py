@@ -3,6 +3,8 @@ from scrapy.loader import ItemLoader
 from itemloaders.processors import TakeFirst, MapCompose, Join
 from unidecode import unidecode
 import re
+import os
+
 
 def clean_text(text):
     """Limpia el texto eliminando espacios y normalizando caracteres"""
@@ -151,13 +153,25 @@ class BibliometricSpider(scrapy.Spider):
                     yield scrapy.Request(response.urljoin(next_url.group(1)), callback=self.parse)
 
     def closed(self, reason):
-        filename = f"resultadosGoogleAcademy.{self.export_format}"
+        """Export collected items when spider closes"""
+        if not self.items:
+            print("No items were collected.")
+            return
+
+        # Ruta completa donde quieres guardar el resultado:
+        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy"
+        filename = os.path.join(output_dir, f"resultadosGoogleAcademy.{self.export_format}")
+
+        # Asegúrate de que el directorio exista:
+        os.makedirs(output_dir, exist_ok=True)
+
         with open(filename, "w", encoding="utf-8") as f:
             for item in self.items:
                 if self.export_format == 'ris':
                     f.write(self.to_ris(item))
                 elif self.export_format == 'bibtex':
                     f.write(self.to_bibtex(item))
+
         print(f"\nExportación completada: {filename}")
 
     def to_ris(self, item):

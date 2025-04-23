@@ -108,7 +108,7 @@ def generate_cooccurrence_graph(cooccurrence_matrix, min_edges=5):
     return plt
 
 # Procesar archivo RIS
-filepath = r'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultados_unificados_20250421_125021.ris'
+filepath = r'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento1/resultados_unificados.ris'
 records = parse_ris_file(filepath)
 
 # Inicializar estructuras para frecuencias
@@ -149,7 +149,8 @@ for categoria, counter in freq_por_categoria.items():
         print(f"  {term}: {count}")
 
 # Generar visualizaciones
-output_dir = "visualizations"
+#output_dir = "visualizations"
+output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento3"
 os.makedirs(output_dir, exist_ok=True)
 
 # Nube de palabras global

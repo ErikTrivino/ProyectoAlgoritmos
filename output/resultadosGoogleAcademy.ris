@@ -479,12 +479,12 @@ AB  -
 ER  -
 
 TY  - JOUR
-TI  - Bringing computational thinking to STEM education
-AU  - SI Swaid
-PY  - 2015
-JF  - Elsevier
-PB  - Procedia Manufacturing
-N2  - ... based strategy is adopted to enforce thinking computationally ... to efforts to establish computational thinking as a universally ... for researchers interested in Computational Thinking and ...
+TI  - Computational thinking : A disciplinary perspective
+AU  - PJ Denning, M Tedre
+PY  - 2021
+JF  - ceeol.com
+PB  - Informatics in Education
+N2  - ... Computational Thinking : A Disciplinary Perspective ... Our objective in this essay is to describe computational thinking ... CT does not describe ways of thinking and practicing of professional ...
 AB  - 
 ER  -
 
@@ -499,12 +499,12 @@ AB  -
 ER  -
 
 TY  - JOUR
-TI  - Computational thinking : A disciplinary perspective
-AU  - PJ Denning, M Tedre
-PY  - 2021
-JF  - ceeol.com
-PB  - Informatics in Education
-N2  - ... Computational Thinking : A Disciplinary Perspective ... Our objective in this essay is to describe computational thinking ... CT does not describe ways of thinking and practicing of professional ...
+TI  - Bringing computational thinking to STEM education
+AU  - SI Swaid
+PY  - 2015
+JF  - Elsevier
+PB  - Procedia Manufacturing
+N2  - ... based strategy is adopted to enforce thinking computationally ... to efforts to establish computational thinking as a universally ... for researchers interested in Computational Thinking and ...
 AB  - 
 ER  -
 
@@ -549,22 +549,22 @@ AB  -
 ER  -
 
 TY  - JOUR
-TI  - A pedagogical framework for computational thinking
-AU  - D Kotsopoulos, L Floyd
-PY  - 2017
-JF  - Springer
-PB  - Digital experiences in ...
-N2  - ... Our goal in this paper is to propose a Computational Thinking Pedagogical Framework (CTPF), developed from constructionism and social-constructivism theories. CTPF includes four ...
-AB  - 
-ER  -
-
-TY  - JOUR
 TI  - Refining an understanding of computational thinking
 AU  - C Selby, J Woollard
 PY  - 2014
 JF  - eprints.soton.ac.uk
 PB  - eprints.soton.ac.uk
 N2  - ... This paper identifies aspects of computational thinking and ... Since Jeanette Wing's use of the term computational thinking ... of the elements of computational thinking need to be identified. ...
+AB  - 
+ER  -
+
+TY  - JOUR
+TI  - A pedagogical framework for computational thinking
+AU  - D Kotsopoulos, L Floyd
+PY  - 2017
+JF  - Springer
+PB  - Digital experiences in ...
+N2  - ... Our goal in this paper is to propose a Computational Thinking Pedagogical Framework (CTPF), developed from constructionism and social-constructivism theories. CTPF includes four ...
 AB  - 
 ER  -
 
@@ -599,16 +599,6 @@ AB  -
 ER  -
 
 TY  - JOUR
-TI  - Teaching Computational Thinking to Elglish Leanrers
-AU  - S Jacob, H Nguyen
-PY  - 2018
-JF  - escholarship.org
-PB  - Grehl ... - NYS Tesol ...
-N2  - ... computational thinking to English learners. In this paper, we first review what computational thinking ... challenges faced in teaching computational thinking to speakers of English as a ...
-AB  - 
-ER  -
-
-TY  - JOUR
 TI  - Computational thinking
 AU  - O Hazzan, N Ragonis
 PY  - 2020
@@ -619,12 +609,32 @@ AB  -
 ER  -
 
 TY  - JOUR
+TI  - Exploring issues about computational thinking in higher education
+AU  - BC Czerkawski, EW Lyman
+PY  - 2015
+JF  - Springer
+PB  - TechTrends
+N2  - ... in other disciplines was more scattered; use of computational methods or modeling ... computational thinking directly, whenever possible. Our preferred definition of computational thinking ...
+AB  - 
+ER  -
+
+TY  - JOUR
 TI  - Problem solving in the context of computational thinking
 AU  - S Maharani, MN Kholid
 PY  - 2019
 JF  - e-journal.stkipsiliwangi.ac.id
 PB  - Infinity ...
 N2  - ... movement to incorporate computational thinking into the ... problem solving and computational thinking . This research was ... with the steps of computational thinking . The method used in ...
+AB  - 
+ER  -
+
+TY  - JOUR
+TI  - Teaching Computational Thinking to Elglish Leanrers
+AU  - S Jacob, H Nguyen
+PY  - 2018
+JF  - escholarship.org
+PB  - Grehl ... - NYS Tesol ...
+N2  - ... computational thinking to English learners. In this paper, we first review what computational thinking ... challenges faced in teaching computational thinking to speakers of English as a ...
 AB  - 
 ER  -
 
@@ -655,16 +665,6 @@ PY  - 2024
 JF  - ieeexplore.ieee.org
 PB  - IEEE Transactions on ...
 N2  - ... framework of computational thinking and scaffolding. A mixed-... in improving their computational thinking generally but not ... aim of improving student computational thinking , especially ...
-AB  - 
-ER  -
-
-TY  - JOUR
-TI  - Exploring issues about computational thinking in higher education
-AU  - BC Czerkawski, EW Lyman
-PY  - 2015
-JF  - Springer
-PB  - TechTrends
-N2  - ... in other disciplines was more scattered; use of computational methods or modeling ... computational thinking directly, whenever possible. Our preferred definition of computational thinking ...
 AB  - 
 ER  -
 
@@ -749,16 +749,6 @@ AB  -
 ER  -
 
 TY  - JOUR
-TI  - A new perspective on computational thinking
-AU  - O Yasar
-PY  - 2018
-JF  - dl.acm.org
-PB  - Communications of the ACM
-N2  - ... Electronic machines have since taken many complex and voluminous computations off our brains, further supporting the view of brain as a biological computational device.Unfortunately ...
-AB  - 
-ER  -
-
-TY  - JOUR
 TI  - Problem solving and computational thinking in a learning environment
 AU  - MG Voskoglou, S Buckley
 PY  - 2012
@@ -775,6 +765,16 @@ PY  - 2018
 JF  - dl.acm.org
 PB  - Proceedings of the 23rd Annual ACM ...
 N2  - ... Computational Thinking (CT) is described as a key skill for ... "We had hoped that Computational Thinking skills would be ... of specific tools, so called Computational Thinking (CT) Tools [16]...
+AB  - 
+ER  -
+
+TY  - JOUR
+TI  - Integrating computational thinking across the K--8 curriculum
+AU  - I Lee, F Martin
+PY  - 2014
+JF  - dl.acm.org
+PB  - Acm Inroads
+N2  - ... Computational thinking is a key skill in the realm of solving unstructured problems, ... This paper aims to help K-8 educators and the public at large understand how computational thinking ...
 AB  - 
 ER  -
 
@@ -799,22 +799,32 @@ AB  -
 ER  -
 
 TY  - JOUR
-TI  - Integrating computational thinking across the K--8 curriculum
-AU  - I Lee, F Martin
-PY  - 2014
-JF  - dl.acm.org
-PB  - Acm Inroads
-N2  - ... Computational thinking is a key skill in the realm of solving unstructured problems, ... This paper aims to help K-8 educators and the public at large understand how computational thinking ...
-AB  - 
-ER  -
-
-TY  - JOUR
 TI  - A systematic review of computational thinking in science classrooms
 AU  - AA Ogegbo, U Ramnarain
 PY  - 2022
 JF  - Taylor & Francis
 PB  - Studies in Science Education
 N2  - ... of computational thinking within science classrooms. We also give an overview of how computational thinking ... tools available for teaching computational thinking in science instruction. ...
+AB  - 
+ER  -
+
+TY  - JOUR
+TI  - A new perspective on computational thinking
+AU  - O Yasar
+PY  - 2018
+JF  - dl.acm.org
+PB  - Communications of the ACM
+N2  - ... Electronic machines have since taken many complex and voluminous computations off our brains, further supporting the view of brain as a biological computational device.Unfortunately ...
+AB  - 
+ER  -
+
+TY  - JOUR
+TI  - Computational thinking as an emerging competence domain
+AU  - A Yadav, J Good
+PY  - 2017
+JF  - Springer
+PB  - ... : Bridging the worlds of work and ...
+N2  - ... computational thinking competencies in children and youth. Specifically, we provide examples of how computational thinking ... We also discuss how computational thinking ideas are ...
 AB  - 
 ER  -
 
@@ -835,16 +845,6 @@ PY  - 2016
 JF  - ieeexplore.ieee.org
 PB  - ... on computers in ...
 N2  - Computers cause an impact in almost every single aspect of our lives, however, unfortunately, schools have not been able to keep up with this irreversible evolution. The simple use of ...
-AB  - 
-ER  -
-
-TY  - JOUR
-TI  - Computational thinking as an emerging competence domain
-AU  - A Yadav, J Good
-PY  - 2017
-JF  - Springer
-PB  - ... : Bridging the worlds of work and ...
-N2  - ... computational thinking competencies in children and youth. Specifically, we provide examples of how computational thinking ... We also discuss how computational thinking ideas are ...
 AB  - 
 ER  -
 
@@ -949,6 +949,16 @@ AB  -
 ER  -
 
 TY  - JOUR
+TI  - Unplugged approaches to computational thinking : A historical perspective
+AU  - EN Caeli, A Yadav
+PY  - 2020
+JF  - Springer
+PB  - TechTrends
+N2  - ... of computational thinking and how history can inspire and inform initiatives today. We introduce how computational thinking ... to argue that computational thinking skills and computing ...
+AB  - 
+ER  -
+
+TY  - JOUR
 TI  - Exploring the computational thinking effects in pre-university education
 AU  - FJ Garcia-Penalvo, AJ Mendes
 PY  - 2018
@@ -975,16 +985,6 @@ PY  - 2017
 JF  - dl.acm.org
 PB  - Communications of the ACM
 N2  - ... The claims that it benefits everyone beyond computational designers are as yet unsubstantiated. This examination of computational thinking sharpens our definition of algorithm ...
-AB  - 
-ER  -
-
-TY  - JOUR
-TI  - Unplugged approaches to computational thinking : A historical perspective
-AU  - EN Caeli, A Yadav
-PY  - 2020
-JF  - Springer
-PB  - TechTrends
-N2  - ... of computational thinking and how history can inspire and inform initiatives today. We introduce how computational thinking ... to argue that computational thinking skills and computing ...
 AB  - 
 ER  -
 

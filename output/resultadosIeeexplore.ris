@@ -129,6 +129,26 @@ UR  - https://ieeexplore.ieee.org/document/9645630/
 ER  -
 
 TY  - JOUR
+TI  - Helping Novice Programmers to Bootstrap in the Cloud: Incorporating Support for Computational Thinking into the Game Design Process
+AU  - Navid Ahmadi, Mehdi Jazayeri, Monica Landoni
+PY  - 2012
+JF  - Rome, Italy
+PB  - IEEE
+AB  - Game design environments are traditionally used as means for engaging non-programmers in the learning process. However, these environments lack specific support for teaching computational thinking to novices. Typically, such skills are acquired in ad hoc practical sessions with supervision provided by teachers or peers. The usual scenario is where a teacher guides the students in solving these problems during a game design session. In informal learning settings, step-by-step tutorials for creating existing games are used to compensate for the lack of computer support for solving design and computational problems. In this paper we suggest a game design process that combines support for computational thinking with tool usage, by identifying the most common computational thinking problems and providing a generic solution to them. We have evaluated our solution in the context of AgentWeb, an online cloud-based game design environment for novices. We discuss how to incorporate suggested computational thinking solutions as computer assistant into the game design user interface.
+UR  - https://ieeexplore.ieee.org/document/6268116/
+ER  -
+
+TY  - JOUR
+TI  - A Study of Micro:bit Teaching Design Based on the Development of Computational Thinking of Secondary School Students
+AU  - Junjie Liu, Xiaojun Xia, Yi Bai, Pingyao Liu
+PY  - 2022
+JF  - Xi'an, China
+PB  - IEEE
+AB  - With the rapid development of human society and technology, it's necessary for contemporary students to have the ability to quickly adapt to social development. Meanwhile, traditional educational concepts have to be transformed in time, and a full understanding of computational thinking plays an important role in promoting students' life-long development. Based on in-depth analysis and research on computational thinking theory, this paper integrates micro: bit into teaching from the perspective of practical application. After analyzing the teaching objectives, teaching contents, and teaching process, this paper proposes an instructional design for the development of computational thinking for secondary school students.
+UR  - https://ieeexplore.ieee.org/document/9973092/
+ER  -
+
+TY  - JOUR
 TI  - Fostering Critical and Computational Thinking in the Field of Primary and Secondary Education in non-STEM Subjects by Using Data Sets and Applications
 AU  - Ines Vlahovic, Ivana Ogrizek Biskupic
 PY  - 2023
@@ -226,25 +246,5 @@ JF  - Xi'an, China
 PB  - IEEE
 AB  - This paper mainly adopts the theory with practice, combines the computational thinking method with education and teaching, and constructs the inquiry teaching model based on computational thinking. We adopt the formal teaching model and learning model, incremental expression of computational thinking ability to improve the effect, from the computational thinking of automation, abstract characteristics of the teaching and learning model based on computational thinking formalization. Then, in the case study, the learning support technology scheme of MOOC course platform combining mobile terminal and HTML5 is designed. Through teaching practice and quantitative analysis of experimental behavior, the platform effectively avoids the interference of programming language code, which simplifies the expression and application process of algorithm thinking, and enhances students' interest and operation of programming working ability.
 UR  - https://ieeexplore.ieee.org/document/9526726/
-ER  -
-
-TY  - JOUR
-TI  - A Study of Micro:bit Teaching Design Based on the Development of Computational Thinking of Secondary School Students
-AU  - Junjie Liu, Xiaojun Xia, Yi Bai, Pingyao Liu
-PY  - 2022
-JF  - Xi'an, China
-PB  - IEEE
-AB  - With the rapid development of human society and technology, it's necessary for contemporary students to have the ability to quickly adapt to social development. Meanwhile, traditional educational concepts have to be transformed in time, and a full understanding of computational thinking plays an important role in promoting students' life-long development. Based on in-depth analysis and research on computational thinking theory, this paper integrates micro: bit into teaching from the perspective of practical application. After analyzing the teaching objectives, teaching contents, and teaching process, this paper proposes an instructional design for the development of computational thinking for secondary school students.
-UR  - https://ieeexplore.ieee.org/document/9973092/
-ER  -
-
-TY  - JOUR
-TI  - Helping Novice Programmers to Bootstrap in the Cloud: Incorporating Support for Computational Thinking into the Game Design Process
-AU  - Navid Ahmadi, Mehdi Jazayeri, Monica Landoni
-PY  - 2012
-JF  - Rome, Italy
-PB  - IEEE
-AB  - Game design environments are traditionally used as means for engaging non-programmers in the learning process. However, these environments lack specific support for teaching computational thinking to novices. Typically, such skills are acquired in ad hoc practical sessions with supervision provided by teachers or peers. The usual scenario is where a teacher guides the students in solving these problems during a game design session. In informal learning settings, step-by-step tutorials for creating existing games are used to compensate for the lack of computer support for solving design and computational problems. In this paper we suggest a game design process that combines support for computational thinking with tool usage, by identifying the most common computational thinking problems and providing a generic solution to them. We have evaluated our solution in the context of AgentWeb, an online cloud-based game design environment for novices. We discuss how to incorporate suggested computational thinking solutions as computer assistant into the game design user interface.
-UR  - https://ieeexplore.ieee.org/document/6268116/
 ER  -
 

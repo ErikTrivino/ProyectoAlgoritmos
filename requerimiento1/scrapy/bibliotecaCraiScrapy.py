@@ -8,6 +8,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import os
+
 
 
 def clean_text(text):
@@ -263,14 +265,20 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
             print("No items were collected.")
             return
 
-        filename = f"resultadosBibliotecaCrai.{self.export_format}"
+        # Ruta completa donde quieres guardar el resultado:
+        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy"
+        filename = os.path.join(output_dir, f"resultadosBibliotecaCrai.{self.export_format}")
+
+        # Asegúrate de importar os al principio del archivo:
+        # import os
+
         with open(filename, "w", encoding="utf-8") as f:
             for item in self.items:
                 if self.export_format == 'ris':
                     f.write(self.to_ris(item))
                 elif self.export_format == 'bibtex':
                     f.write(self.to_bibtex(item))
-        
+
         print(f"\nExportación completada: {filename}")
         self.driver.quit()
 

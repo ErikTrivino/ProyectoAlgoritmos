@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "source_file": "C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultados_unificados_20250421_125021.ris",
+    "timestamp": "20250423_094815",
+    "total_publications": 130
+  },
+  "top_authors": {
+    "JM Wing": 3,
+    "PJ Denning": 3,
+    "... for the Workshops on  Computational Thinking": 2,
+    "": 2,
+    "AV Aho": 2,
+    "I Lee, F": 2,
+    "S Grover, R": 2,
+    "Y Li, AH": 2,
+    "A Yadav, C": 2,
+    "J Wing": 2,
+    "C Selby, J": 2,
+    "PJ Denning, M": 2,
+    "K Beecher": 1,
+    "Ghazali, Khadijah": 1,
+    "Putra, Zetra": 1
+  },
+  "publications_by_year_type": {
+    "article": {
+      "2006.0": 2,
+      "2007.0": 2,
+      "2008.0": 2,
+      "2009.0": 7,
+      "2010.0": 4,
+      "2011.0": 9,
+      "2012.0": 4,
+      "2013.0": 4,
+      "2014.0": 10,
+      "2015.0": 5,
+      "2016.0": 10,
+      "2017.0": 13,
+      "2018.0": 12,
+      "2019.0": 11,
+      "2020.0": 10,
+      "2021.0": 5,
+      "2022.0": 6,
+      "2023.0": 4,
+      "2024.0": 7,
+      "4600.0": 1
+    }
+  },
+  "publication_types": {
+    "article": 130
+  },
+  "top_journals": {
+    "": 130
+  },
+  "top_publishers": {
+    "IEEE": 28,
+    "Communications of the ACM": 10,
+    "TechTrends": 4,
+    "books.google.com": 3,
+    "Proceedings of the ...": 3,
+    "eprints.soton.ac.uk": 3,
+    "Acm Inroads": 2,
+    "Journal for STEM ...": 2,
+    "Informatics in Education": 2,
+    "Proceedings of the 40th ACM technical ...": 1,
+    "dl.acm.org": 1,
+    "Asia-Pacific Education Researcher": 1,
+    "... Transactions of the Royal Society A ...": 1,
+    "Clarke  - Educational research review": 1,
+    "Proceedings of the 38th SIGCSE ...": 1
+  }
+}

@@ -1,0 +1,1394 @@
+{
+  "total_clusters": 126,
+  "average_cluster_size": 1.007936507936508,
+  "clusters": [
+    {
+      "id": 0,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Prospective Elementary Teachers' Computational Thinking Skills: A Preliminary Study"
+      ],
+      "sample_abstracts": [
+        "Computational thinking refers to thinking and solving issues in the same way as computer scientists do. This study aims to evaluate the computational ..."
+      ]
+    },
+    {
+      "id": 1,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Using Rubrics for Assessment and Peer Assessment of Artful Robotics Projects with the Focus on Computational Thinking"
+      ],
+      "sample_abstracts": [
+        "Teaching with educational robots is increasingly being integrated into the curriculum. However, many teachers, and especially those who have been in p..."
+      ]
+    },
+    {
+      "id": 2,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Integrating Computational Thinking Skills in Secondary Education: a Feasibility Study"
+      ],
+      "sample_abstracts": [
+        "This feasibility study investigates the practicality of incorporating Computational Thinking (CT) education into secondary school curricula, aiming to..."
+      ]
+    },
+    {
+      "id": 3,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Demographic and Educational Correlation of High School Students' Computational Thinking Skills: Evidence from Four Chinese Schools"
+      ],
+      "sample_abstracts": [
+        "13..."
+      ]
+    },
+    {
+      "id": 4,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[LIBRO] [B] Report of a workshop on the pedagogical aspects of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... practices for improving computational thinking in K-12 education? * What are some examples of computational thinking and how, if at all, does comp..."
+      ]
+    },
+    {
+      "id": 5,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking and thinking about computing"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking is a kind of analytical thinking . It shares with mathematical thinking ... It shares with engineering thinking in the gene..."
+      ]
+    },
+    {
+      "id": 6,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking is a fundamental skill for everyone, not just for computer scientists. To reading, writing, and arithmetic, we should add c..."
+      ]
+    },
+    {
+      "id": 7,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Demystifying computational thinking"
+      ],
+      "sample_abstracts": [
+        "... This paper examines the growing field of computational thinking (CT) in education. A review ... This definition highlights that CT is primarily a ..."
+      ]
+    },
+    {
+      "id": 8,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[LIBRO] [B] Report of a workshop on the scope and nature of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... computational thinking . Although this document was prepared by the Committee for the Workshops on Computational Thinking ... of perspectives on c..."
+      ]
+    },
+    {
+      "id": 9,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking"
+      ],
+      "sample_abstracts": [
+        "... computational thinking , followed naturally by arithmetic computation and abstract levels of symbol based thinking , ... Counting, arithmetic, sym..."
+      ]
+    },
+    {
+      "id": 10,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "An overview of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... of computational thinking . This study aims to first define the concept of computational thinking by ... of computational thinking and contemporar..."
+      ]
+    },
+    {
+      "id": 11,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[LIBRO] [B] Computational thinking"
+      ],
+      "sample_abstracts": [
+        "This pocket-sized introduction to computational thinking and problem-solving traces its genealogy centuries before the digital computer. A few decades..."
+      ]
+    },
+    {
+      "id": 12,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking"
+      ],
+      "sample_abstracts": [
+        "Computational thinking is a ... of computational thinking , with this book you'll build up an understanding of the practical problem-solving approach ..."
+      ]
+    },
+    {
+      "id": 13,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Thinking about computational thinking"
+      ],
+      "sample_abstracts": [
+        "... Analogously, we believe the same dichotomy exists between computational thinking , as a ... FOR THINKING COMPUTATIONALLY We need to start teaching..."
+      ]
+    },
+    {
+      "id": 14,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking"
+      ],
+      "sample_abstracts": [
+        "In nur wenigen Jahrzehnten hat das ,, Computational Thinking \", also das analytische, von Algorithmen gepragte Denken unser Leben, Arbeiten und Spiele..."
+      ]
+    },
+    {
+      "id": 15,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking"
+      ],
+      "sample_abstracts": [
+        "Web pages, a strategy for winning a game, or a counterexample. Computational thinking is using massive amounts of data to speed up computation . It is..."
+      ]
+    },
+    {
+      "id": 16,
+      "size": 2,
+      "average_similarity": 0.10898738406381797,
+      "sample_titles": [
+        "Computation and computational thinking",
+        "Ubiquity symposium: Computation and computational thinking"
+      ],
+      "sample_abstracts": [
+        "... COMPUTATIONAL THINKING We consider computational thinking to be the thought processes involved in formulating problems so their solutions can be r...",
+        "... We consider computational thinking to be the thought processes involved in formulating problems so their solutions can be represented as computati..."
+      ]
+    },
+    {
+      "id": 17,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Editorial computational thinking"
+      ],
+      "sample_abstracts": [
+        "... devoted entirely to the topic of \" Computational thinking \" [item 7) in ... computational thinking effects in preuniversity education\" [item 8) in..."
+      ]
+    },
+    {
+      "id": 18,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking"
+      ],
+      "sample_abstracts": [
+        "... One approach to teaching these skills is to teach computational thinking (CT). CT is particularly useful for the computer age, because it not only..."
+      ]
+    },
+    {
+      "id": 19,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[LIBRO] [B] Computational thinking education"
+      ],
+      "sample_abstracts": [
+        "This This book is open access under a CC BY 4.0 license. This book offers a comprehensive guide, covering every important aspect of computational thin..."
+      ]
+    },
+    {
+      "id": 20,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[HTML] [HTML] Computational thinking"
+      ],
+      "sample_abstracts": [
+        "Abstract. The aim of the research is to draw attention of the educational community to the phenomenon of computational thinking which actively discuss..."
+      ]
+    },
+    {
+      "id": 21,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] From computational thinking to computational action"
+      ],
+      "sample_abstracts": [
+        "... In this Viewpoint, we outline two key dimensions of computational action-- computational identity and digital empowerment--and further argue that ..."
+      ]
+    },
+    {
+      "id": 22,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking is pervasive"
+      ],
+      "sample_abstracts": [
+        "... in our Computational Thinking seminars: the infiltration of computational metaphors into ... These are just a few of the many talks in our Computa..."
+      ]
+    },
+    {
+      "id": 23,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in K-9 education"
+      ],
+      "sample_abstracts": [
+        "... In this paper, we focus on computational thinking (CT) and different aspects of introducing it in the K-9 curriculum. CT is a term encompassing a ..."
+      ]
+    },
+    {
+      "id": 24,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Experiences in learning problem-solving through computational thinking"
+      ],
+      "sample_abstracts": [
+        "... proposals with the aim of introducing computational thinking to the problem solving issue. ... is necessary for those careers having computational..."
+      ]
+    },
+    {
+      "id": 25,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking : the developing definition"
+      ],
+      "sample_abstracts": [
+        "... Since Jeanette Wing's use of the term computational thinking ... Perhaps focus should be on how computational thinking is ... surrounding a defini..."
+      ]
+    },
+    {
+      "id": 26,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "From computational thinking to computational participation in K--12 education"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking should be reframed as com- ... It equips designers, educators, and researchers to broaden and deepen computational thinking..."
+      ]
+    },
+    {
+      "id": 27,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking education: Issues and challenges"
+      ],
+      "sample_abstracts": [
+        "... final assessment of children's computational thinking skills. Also, ... inform the teaching of computational thinking skills. In addition, ... set..."
+      ]
+    },
+    {
+      "id": 28,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "From computational thinking to computational making"
+      ],
+      "sample_abstracts": [
+        "... computational thinking . Finally, we show that additional skills are needed beyond computational thinking to ... these skills and present the set ..."
+      ]
+    },
+    {
+      "id": 29,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Research notebook: Computational thinking --What and why"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking is the thought processes involved in formulating problems ... computational thinking describes the mental activity in formu..."
+      ]
+    },
+    {
+      "id": 30,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "The profession of IT Beyond computational thinking"
+      ],
+      "sample_abstracts": [
+        "... [We] advocate for the widespread use of computational thinking to improve people's lives.\" Computational thinking is seen by its adherents as a no..."
+      ]
+    },
+    {
+      "id": 31,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking for teacher education"
+      ],
+      "sample_abstracts": [
+        "... Here, we argue that, given the crossdisciplinary nature of computational thinking and the need to address educational reforms--Next Generation Sci..."
+      ]
+    },
+    {
+      "id": 32,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking -A guide for teachers"
+      ],
+      "sample_abstracts": [
+        "... Computational Thinking has become the buzz term for many ... At the heart of the new curriculum is computational thinking ... framework for unders..."
+      ]
+    },
+    {
+      "id": 33,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational what? Relating computational thinking to teaching"
+      ],
+      "sample_abstracts": [
+        "... of computational thinking to their ... of computational thinking , and the methods of teaching problem-solving for enabling teachers to make the c..."
+      ]
+    },
+    {
+      "id": 34,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational Thinking Patterns."
+      ],
+      "sample_abstracts": [
+        "... We consider the ability to measure and compute computational thinking through Computational Thinking Patterns, as an important breakthrough. Given..."
+      ]
+    },
+    {
+      "id": 35,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "The long quest for computational thinking"
+      ],
+      "sample_abstracts": [
+        "... the broad and deep history of computational thinking , or risk repeating already ... thinking and practicing, educational research and efforts in ..."
+      ]
+    },
+    {
+      "id": 36,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Introducing computational thinking in education courses"
+      ],
+      "sample_abstracts": [
+        "... As computational thinking becomes a fundamental skill for ... tion and evaluation of a computational thinking module in a ... and understanding of..."
+      ]
+    },
+    {
+      "id": 37,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking for youth in practice"
+      ],
+      "sample_abstracts": [
+        "... on thinking like a computer scientist in college and beyond. Specifically, we offer examples of what computational thinking ... commonalities in t..."
+      ]
+    },
+    {
+      "id": 38,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking and literacy"
+      ],
+      "sample_abstracts": [
+        "... of computational thinking in the literature is sparse. One purpose of this article is to ... computational thinking as a new form of literacy by i..."
+      ]
+    },
+    {
+      "id": 39,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking is more about thinking than computing"
+      ],
+      "sample_abstracts": [
+        "... concept of computational thinking is arguably ... computational thinking to discuss it as a multi-faceted theoretical nature. We further present c..."
+      ]
+    },
+    {
+      "id": 40,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking tools"
+      ],
+      "sample_abstracts": [
+        "... computational thinking . As these tools evolved a philosophy emerged to support Computational Thinking ... Chief among these findings is that supp..."
+      ]
+    },
+    {
+      "id": 41,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in science"
+      ],
+      "sample_abstracts": [
+        "... computation as part of STEM (science, technology, engineering, and mathematics) education. If we can learn what constitutes computational thinking..."
+      ]
+    },
+    {
+      "id": 42,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "On computational thinking and STEM education"
+      ],
+      "sample_abstracts": [
+        "... 2020a), we discussed computational thinking (CT) as a model of thinking that is important to ... Based on our proposal that CT should emphasize th..."
+      ]
+    },
+    {
+      "id": 43,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking"
+      ],
+      "sample_abstracts": [
+        "... * Computational thinking will be a fundamental skill used by everyone in the world by the middle of the 21st Century. ... - It's not just the soft..."
+      ]
+    },
+    {
+      "id": 44,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "The present and future of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... at how computational thinking has transformed the world. But it is not computational thinking that we study, it is the products and methodologies ..."
+      ]
+    },
+    {
+      "id": 45,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking : A digital age skill for everyone."
+      ],
+      "sample_abstracts": [
+        "... examples of computational thinking tied to current ... a common language surrounding computational thinking , articulate ... and strategies for mo..."
+      ]
+    },
+    {
+      "id": 46,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in K-12: In-service teacher perceptions of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... in-service teachers perceive computational thinking within elementary and secondary ... computational thinking practices. We also discuss specific..."
+      ]
+    },
+    {
+      "id": 47,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in K-12: A review of the state of the field"
+      ],
+      "sample_abstracts": [
+        "... Jeannette Wing's influential article on computational thinking ... What is computational thinking ? Why did this article resonate ... current stat..."
+      ]
+    },
+    {
+      "id": 48,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Recognizing computational thinking patterns"
+      ],
+      "sample_abstracts": [
+        "... learn \" Computational Thinking \" [7]. However, the definition of Computational Thinking at the ... In other words, for Computational Thinking to b..."
+      ]
+    },
+    {
+      "id": 49,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Robotics and computational thinking in primary school"
+      ],
+      "sample_abstracts": [
+        "... However, the literature on implementing computational thinking in primary schools is limited ... introduce computational thinking concepts and how..."
+      ]
+    },
+    {
+      "id": 50,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Which cognitive abilities underlie computational thinking ? Criterion validity of the Computational Thinking Test"
+      ],
+      "sample_abstracts": [
+        "Computational thinking (CT) is being located at the focus of educational innovation, as a set of problem-solving skills that must be acquired by the n..."
+      ]
+    },
+    {
+      "id": 51,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Bringing computational thinking to STEM education"
+      ],
+      "sample_abstracts": [
+        "... based strategy is adopted to enforce thinking computationally ... to efforts to establish computational thinking as a universally ... for research..."
+      ]
+    },
+    {
+      "id": 52,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in elementary and secondary teacher education"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking (CT) is broadly defined as the mental ... and introducing computational thinking modules and ... Results demonstrate that i..."
+      ]
+    },
+    {
+      "id": 53,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking : A disciplinary perspective"
+      ],
+      "sample_abstracts": [
+        "... Computational Thinking : A Disciplinary Perspective ... Our objective in this essay is to describe computational thinking ... CT does not describe..."
+      ]
+    },
+    {
+      "id": 54,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Do we really need computational thinking ?"
+      ],
+      "sample_abstracts": [
+        "... The focus of this Viewpoint is to discuss to what extent we need the expression \" computational thinking \" (CT). The term was already known throug..."
+      ]
+    },
+    {
+      "id": 55,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking today"
+      ],
+      "sample_abstracts": [
+        "This chapter reflects on where computational thinking (CT) is today - from growing recognition as an idea and 21st-century skill in the mainstream, to..."
+      ]
+    },
+    {
+      "id": 56,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A revaluation of computational thinking in K-12 education: Moving toward computational literacies"
+      ],
+      "sample_abstracts": [
+        "... can become a centerpiece in promoting computational literacies relevant to K-12 ... when computational thinking is promoted, and how we can ensure..."
+      ]
+    },
+    {
+      "id": 57,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking : A 21st century skill"
+      ],
+      "sample_abstracts": [
+        "... pillars of computational thinking and present practical suggestions, namely computational mathematics and artificial intelligence labs, as platfor..."
+      ]
+    },
+    {
+      "id": 58,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A pedagogical framework for computational thinking"
+      ],
+      "sample_abstracts": [
+        "... Our goal in this paper is to propose a Computational Thinking Pedagogical Framework (CTPF), developed from constructionism and social-constructivi..."
+      ]
+    },
+    {
+      "id": 59,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Refining an understanding of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... This paper identifies aspects of computational thinking and ... Since Jeanette Wing's use of the term computational thinking ... of the elements o..."
+      ]
+    },
+    {
+      "id": 60,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Trends and development in research on computational thinking"
+      ],
+      "sample_abstracts": [
+        "... As computational thinking (CT) has gained more attention as a research topic in the recent ... The findings of the study showed that (1) the resea..."
+      ]
+    },
+    {
+      "id": 61,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A framework for computational thinking across the curriculum"
+      ],
+      "sample_abstracts": [
+        "... a framework for implementing computational thinking in a ... computational thinking into their own general education courses. The framework includ..."
+      ]
+    },
+    {
+      "id": 62,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Defining computational thinking for mathematics and science classrooms"
+      ],
+      "sample_abstracts": [
+        "... computational thinking instructional materials. This work was undertaken as part of a larger effort to infuse computational thinking ... of embedd..."
+      ]
+    },
+    {
+      "id": 63,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Teaching Computational Thinking to Elglish Leanrers"
+      ],
+      "sample_abstracts": [
+        "... computational thinking to English learners. In this paper, we first review what computational thinking ... challenges faced in teaching computatio..."
+      ]
+    },
+    {
+      "id": 64,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking"
+      ],
+      "sample_abstracts": [
+        "... done worldwide in promoting computational thinking skills in ... thinking skills in general and computational thinking in particular. Studies show..."
+      ]
+    },
+    {
+      "id": 65,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Problem solving in the context of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... movement to incorporate computational thinking into the ... problem solving and computational thinking . This research was ... with the steps of c..."
+      ]
+    },
+    {
+      "id": 66,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Education paving the way for computational thinking"
+      ],
+      "sample_abstracts": [
+        "... Both Miller's and Pane's results encourage us to think how we might design languages for novices that play to their natural ways of thinking about..."
+      ]
+    },
+    {
+      "id": 67,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking , between Papert and Wing"
+      ],
+      "sample_abstracts": [
+        "... : scientists exploit computational tools, \"... computational thinking \" is defined as a \"practice of science and engineering.\" In that context, ma..."
+      ]
+    },
+    {
+      "id": 68,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Scaffolding computational thinking with ChatGPT"
+      ],
+      "sample_abstracts": [
+        "... framework of computational thinking and scaffolding. A mixed-... in improving their computational thinking generally but not ... aim of improving ..."
+      ]
+    },
+    {
+      "id": 69,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Exploring issues about computational thinking in higher education"
+      ],
+      "sample_abstracts": [
+        "... in other disciplines was more scattered; use of computational methods or modeling ... computational thinking directly, whenever possible. Our pref..."
+      ]
+    },
+    {
+      "id": 70,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[HTML] [HTML] A systematic review of integrating computational thinking in early childhood education"
+      ],
+      "sample_abstracts": [
+        "... and learning of computational thinking in early childhood ... early concepts and skills of computational thinking , as well as other ... of comput..."
+      ]
+    },
+    {
+      "id": 71,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking : The skill set of the 21st century"
+      ],
+      "sample_abstracts": [
+        "... an introduction to computational thinking as a term, ... of computational thinking in general, and areas in which it may be applied. We also explo..."
+      ]
+    },
+    {
+      "id": 72,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking : what it might mean and what we might do about it"
+      ],
+      "sample_abstracts": [
+        "... to discuss what computational thinking is from attendees' own experiences and how it impacts upon our everyday lives. Some participants believed t..."
+      ]
+    },
+    {
+      "id": 73,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Real time assessment of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... The emphasis on computational thinking makes our system unique in the realm of real-time in-class assessment tools. There are many attempts at rea..."
+      ]
+    },
+    {
+      "id": 74,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Why computational thinking should be integrated into the curriculum"
+      ],
+      "sample_abstracts": [
+        "... 's article provides a grand vision for computational thinking . ... What kinds of tools can make computational thinking most ... in an effort to i..."
+      ]
+    },
+    {
+      "id": 75,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A K-6 computational thinking curriculum framework: Implications for teacher knowledge"
+      ],
+      "sample_abstracts": [
+        "... 2006), the teaching of computational thinking , as a basic skill ... abstract, algorithmic and logical thinking , and be prepared to ... of thinki..."
+      ]
+    },
+    {
+      "id": 76,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A model for developing computational thinking skills"
+      ],
+      "sample_abstracts": [
+        "... The reflection on computational thinking (CT) started from thinking about the way computer ... Seymour Papert (1996) suggested a goal of introduci..."
+      ]
+    },
+    {
+      "id": 77,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A new perspective on computational thinking"
+      ],
+      "sample_abstracts": [
+        "... Electronic machines have since taken many complex and voluminous computations off our brains, further supporting the view of brain as a biological..."
+      ]
+    },
+    {
+      "id": 78,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Problem solving and computational thinking in a learning environment"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking is a new problem solving method ... It synthesizes critical thinking and existing knowledge and ... computational and criti..."
+      ]
+    },
+    {
+      "id": 79,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Teaching how to teach computational thinking"
+      ],
+      "sample_abstracts": [
+        "... Computational Thinking (CT) is described as a key skill for ... \"We had hoped that Computational Thinking skills would be ... of specific tools, s..."
+      ]
+    },
+    {
+      "id": 80,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "CTArcade: Computational thinking with games in school age children"
+      ],
+      "sample_abstracts": [
+        "... thinking activities that are built from their tacit knowledge and excitement about game play. This paper describes our approach to teaching comput..."
+      ]
+    },
+    {
+      "id": 81,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in mathematics teacher education"
+      ],
+      "sample_abstracts": [
+        "... their need to develop \" computational thinking pedagogical capabilities - understanding of ... we develop teachers' understanding of computational..."
+      ]
+    },
+    {
+      "id": 82,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Integrating computational thinking across the K--8 curriculum"
+      ],
+      "sample_abstracts": [
+        "... Computational thinking is a key skill in the realm of solving unstructured problems, ... This paper aims to help K-8 educators and the public at l..."
+      ]
+    },
+    {
+      "id": 83,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A systematic review of computational thinking in science classrooms"
+      ],
+      "sample_abstracts": [
+        "... of computational thinking within science classrooms. We also give an overview of how computational thinking ... tools available for teaching compu..."
+      ]
+    },
+    {
+      "id": 84,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking : Panorama of the Americas"
+      ],
+      "sample_abstracts": [
+        "Computers cause an impact in almost every single aspect of our lives, however, unfortunately, schools have not been able to keep up with this irrevers..."
+      ]
+    },
+    {
+      "id": 85,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking as an emerging competence domain"
+      ],
+      "sample_abstracts": [
+        "... computational thinking competencies in children and youth. Specifically, we provide examples of how computational thinking ... We also discuss how..."
+      ]
+    },
+    {
+      "id": 86,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in life science education"
+      ],
+      "sample_abstracts": [
+        "... to explicitly reflect upon computational thinking processes, resisting ... computational thinking processes. This paper deals with the challenges ..."
+      ]
+    },
+    {
+      "id": 87,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A multidisciplinary approach towards computational thinking for science majors"
+      ],
+      "sample_abstracts": [
+        "... to Computational Thinking \" taken by ... computational thinking via basic programming concepts, data management concepts, simulation, and visualiz..."
+      ]
+    },
+    {
+      "id": 88,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking for teachers: Development of a localised E-learning system"
+      ],
+      "sample_abstracts": [
+        "... of understanding of computational thinking skills in general ... system to train computational thinking skills among teachers. ... framework to pr..."
+      ]
+    },
+    {
+      "id": 89,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[LIBRO] [B] From computing to computational thinking"
+      ],
+      "sample_abstracts": [
+        "Computational Thinking (CT) involves fundamental concepts and reasoning, distilled from computer science and other computational sciences, which becom..."
+      ]
+    },
+    {
+      "id": 90,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Computational thinking unplugged"
+      ],
+      "sample_abstracts": [
+        "The idea of computational thinking unplugged refers to a set of activities that are developed to encourage children skills that can be recalled later,..."
+      ]
+    },
+    {
+      "id": 91,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] Developing computational thinking in compulsory education"
+      ],
+      "sample_abstracts": [
+        "In the past decade, Computational Thinking (CT) and related concepts (eg coding, programing, algorithmic thinking ) have received increasing attention..."
+      ]
+    },
+    {
+      "id": 92,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Learning computational thinking without a computer: How computational participation happens in a computational thinking board game"
+      ],
+      "sample_abstracts": [
+        "... This study utilized unplugged computational thinking learning material ... in computational thinking , and to explore its impact on students' lear..."
+      ]
+    },
+    {
+      "id": 93,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] From Computational Thinking to AI Thinking [A letter from the editor]"
+      ],
+      "sample_abstracts": [
+        "... data science-- directly apply to AI thinking . Yet, AI thinking needs to go beyond what computational thinking offers... Here, we attempt to provi..."
+      ]
+    },
+    {
+      "id": 94,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "[PDF] [PDF] New frameworks for studying and assessing the development of computational thinking"
+      ],
+      "sample_abstracts": [
+        "... , we have developed a computational thinking framework that ... of our computational thinking framework: computational ... parallelism, etc.), com..."
+      ]
+    },
+    {
+      "id": 95,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking in compulsory education: Towards an agenda for research and practice"
+      ],
+      "sample_abstracts": [
+        "... computational thinking there is a range of issues and challenges facing us as we attempt to integrate computational thinking ... mean when we spea..."
+      ]
+    },
+    {
+      "id": 96,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Exploring the computational thinking effects in pre-university education"
+      ],
+      "sample_abstracts": [
+        "... thinking skills and problem-solving skills throughout programming approaches or computational thinking . ... , with a special focus on the computa..."
+      ]
+    },
+    {
+      "id": 97,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Reflective abstraction in computational thinking"
+      ],
+      "sample_abstracts": [
+        "... computational thinking is not new to the education community. Although computational thinking ... Of the numerous definitions for the computationa..."
+      ]
+    },
+    {
+      "id": 98,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Remaining trouble spots with computational thinking"
+      ],
+      "sample_abstracts": [
+        "... The claims that it benefits everyone beyond computational designers are as yet unsubstantiated. This examination of computational thinking sharpen..."
+      ]
+    },
+    {
+      "id": 99,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Unplugged approaches to computational thinking : A historical perspective"
+      ],
+      "sample_abstracts": [
+        "... of computational thinking and how history can inspire and inform initiatives today. We introduce how computational thinking ... to argue that comp..."
+      ]
+    },
+    {
+      "id": 100,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Developing computational thinking with educational technologies for young learners"
+      ],
+      "sample_abstracts": [
+        "... the opportunities for developing computational thinking in young learners, ... computational thinking , and the analyses of selected readily avail..."
+      ]
+    },
+    {
+      "id": 101,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "On Computational Tools, Computational Thinking and Computational Methods"
+      ],
+      "sample_abstracts": [
+        "The appearance and innovation of computational tools depends on human thinking and initiative, and on the other hand, human thinking is affected by co..."
+      ]
+    },
+    {
+      "id": 102,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Enhancing Computational Strategies to Decode ChatGPT's Influence on the Critical Thinking Abilities of University Students"
+      ],
+      "sample_abstracts": [
+        "The integration of artificial intelligence (AI) tools such as ChatGPT into educational contexts is reshaping the landscape of student learning and cri..."
+      ]
+    },
+    {
+      "id": 103,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Exploration of ability development of engineering and computational thinking skills in software engineering majors"
+      ],
+      "sample_abstracts": [
+        "Software talents should have the engineering ability, a common sense in IT industry, which is characterized by the fact that design plays a very impor..."
+      ]
+    },
+    {
+      "id": 104,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Performance-based evaluation of computational thinking skills using machine learning"
+      ],
+      "sample_abstracts": [
+        "This thesis study is an evaluation tool that measures the user's Computational Thinking (CT) according to its performance on Block-Based Programming L..."
+      ]
+    },
+    {
+      "id": 105,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Mapping computational thinking mindsets between educational levels with cognitive network science"
+      ],
+      "sample_abstracts": [
+        "A significant aspect of computational thinking is as a way of reasoning about the world in terms of data. This mindset channels number-crunching towar..."
+      ]
+    },
+    {
+      "id": 106,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computer Science Unplugged for Developing Computational Thinking and Mathematical Thinking"
+      ],
+      "sample_abstracts": [
+        "The purpose of this study is to make learning material that can develop both Computational thinking and Mathematical thinking. This study suggest a ha..."
+      ]
+    },
+    {
+      "id": 107,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A practical research on the training of middle school students' computational thinking based on problem solving in systematic information process view"
+      ],
+      "sample_abstracts": [
+        "Computational thinking is the process sequence of solving problems and behaves a method of systematic solving problems. Computational thinking is esse..."
+      ]
+    },
+    {
+      "id": 108,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Improving Computational Thinking Competencies in STEM Higher Education"
+      ],
+      "sample_abstracts": [
+        "Computational thinking (CT) is a key competency with a significant impact on students' academic performance in STEM fields. It empowers students to en..."
+      ]
+    },
+    {
+      "id": 109,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational thinking tools"
+      ],
+      "sample_abstracts": [
+        "Computational Thinking is an essential skill for all students in the 21 st Century. A fundamental question is how can we create computer affordances t..."
+      ]
+    },
+    {
+      "id": 110,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Teaching mode reform and exploration on the University Computer Basic based on Computational thinking training in Network Environment"
+      ],
+      "sample_abstracts": [
+        "Due to the international and domestic education and computer industries and so on computational thinking attaches great importance and has done consid..."
+      ]
+    },
+    {
+      "id": 111,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational Thinking & Practical Thinking Inspired Java Web Curriculum Reform Method"
+      ],
+      "sample_abstracts": [
+        "Both Computational thinking and Practical thinking are important concepts of great concern to the international computer community. They are also hot ..."
+      ]
+    },
+    {
+      "id": 112,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Computational Thinking Education: Who Let the Dog Out?"
+      ],
+      "sample_abstracts": [
+        "Today, Computational Thinking is seen as an important competency and the fourth skill that every child should process. Several significant attempts ha..."
+      ]
+    },
+    {
+      "id": 113,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Influence of Programming Robot Learning Mode Based on Conceptual Mapping on College Students' Computational Thinking"
+      ],
+      "sample_abstracts": [
+        "As the information age has progressed, computational thinking ability to solve problems has become an indispensable way of life in life. Many scholars..."
+      ]
+    },
+    {
+      "id": 114,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Helping Novice Programmers to Bootstrap in the Cloud: Incorporating Support for Computational Thinking into the Game Design Process"
+      ],
+      "sample_abstracts": [
+        "Game design environments are traditionally used as means for engaging non-programmers in the learning process. However, these environments lack specif..."
+      ]
+    },
+    {
+      "id": 115,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "A Study of Micro:bit Teaching Design Based on the Development of Computational Thinking of Secondary School Students"
+      ],
+      "sample_abstracts": [
+        "With the rapid development of human society and technology, it's necessary for contemporary students to have the ability to quickly adapt to social de..."
+      ]
+    },
+    {
+      "id": 116,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Fostering Critical and Computational Thinking in the Field of Primary and Secondary Education in non-STEM Subjects by Using Data Sets and Applications"
+      ],
+      "sample_abstracts": [
+        "Critical and computational thinking in primary and secondary education in recent years shows growing importance in methodical approaches used in the c..."
+      ]
+    },
+    {
+      "id": 117,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Improving learning of computational thinking using creative thinking exercises in CS-1 computer science courses"
+      ],
+      "sample_abstracts": [
+        "Promoting computational thinking is one of the top priorities in CS education as well as in other STEM and non-STEM disciplines. Our innovative NSF-fu..."
+      ]
+    },
+    {
+      "id": 118,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Real Time Assessment of Computational Thinking"
+      ],
+      "sample_abstracts": [
+        "This paper suggests a Cyberlearning tool based on a highly innovative assessment methodology that helps teachers with computer science education. Curr..."
+      ]
+    },
+    {
+      "id": 119,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Construction and Application of a Computational Thinking Assessment Framework from the Perspective of the Iceberg Model"
+      ],
+      "sample_abstracts": [
+        "Computational thinking assessment is an important part of testing the effectiveness of computational thinking cultivation. However, the existing compu..."
+      ]
+    },
+    {
+      "id": 120,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "An Empirical Study on Blended Learning to Promote the Development of Computational Thinking Ability of College Students"
+      ],
+      "sample_abstracts": [
+        "Studies have shown that learning approaches are able to promote the developments of computational thinking on students, including cooperative learning..."
+      ]
+    },
+    {
+      "id": 121,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Hot Spots and Trends of Computational Thinking Research in China CiteSpace visualization and analysis based on CNKI data"
+      ],
+      "sample_abstracts": [
+        "With the rapid development of computer technology, computational thinking, as one of the core literacy elements of information technology majors, has ..."
+      ]
+    },
+    {
+      "id": 122,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Bringing Computational Thinking Skills Into Physics Classroom Through Project-Based Learning"
+      ],
+      "sample_abstracts": [
+        "Computational thinking is a fundamental thinking skill for students in the 21st-century learning era. This study aims to integrate computational think..."
+      ]
+    },
+    {
+      "id": 123,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Promoting Computational Thinking Skills Through Game-Based Learning of Students in Lower Secondary School"
+      ],
+      "sample_abstracts": [
+        "This study's objectives were to: 1) compare computational thinking skills before and after game-based learning activities; and 2) study students' sati..."
+      ]
+    },
+    {
+      "id": 124,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "Integrating Mathematical Thinking, Abstract Thinking, and Computational Thinking"
+      ],
+      "sample_abstracts": [
+        "In recent years, several groups of Computer Science educators have made a sustained effort to capture the essence of CS apart from programming. Three ..."
+      ]
+    },
+    {
+      "id": 125,
+      "size": 1,
+      "average_similarity": 0,
+      "sample_titles": [
+        "The Teaching Mode and Practice Analysis of College Computer Basic Course Based on Computational Thinking"
+      ],
+      "sample_abstracts": [
+        "This paper mainly adopts the theory with practice, combines the computational thinking method with education and teaching, and constructs the inquiry ..."
+      ]
+    }
+  ]
+}

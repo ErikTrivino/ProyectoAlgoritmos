@@ -5,9 +5,9 @@ from datetime import datetime
 def ejecutar_spiders():
     """Ejecuta todos los spiders de Scrapy"""
     spiders = [
-        'bibliotecaCraiScrapy.py',
-        'googleAcademyScrapy.py',
-        'ieeeXploreScrapy.py'
+        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/bibliotecaCraiScrapy.py',
+        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/googleAcademyScrapy.py',
+        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/ieeeXploreScrapy.py'
     ]
     
     print("\n=== EJECUTANDO SPIDERS ===")
@@ -216,13 +216,18 @@ def generar_registro_ris(item: dict) -> str:
     return ris
 
 def guardar_resultados(registros: list, prefijo: str):
-    """Guarda los registros en archivos RIS"""
+    """Guarda los registros en archivos RIS dentro de resultados/requerimiento1"""
     if not registros:
         print(f" No hay registros para guardar en {prefijo}")
         return
     
+    # Carpeta fija
+    output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento1"
+    os.makedirs(output_dir, exist_ok=True)
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    nombre_archivo = f"{prefijo}_{timestamp}.ris"
+    #nombre_archivo = os.path.join(output_dir, f"{prefijo}_{timestamp}.ris")
+    nombre_archivo = os.path.join(output_dir, f"{prefijo}.ris")
     
     with open(nombre_archivo, 'w', encoding='utf-8') as f:
         for registro in registros:
@@ -230,11 +235,12 @@ def guardar_resultados(registros: list, prefijo: str):
     
     print(f" Archivo guardado: {nombre_archivo} ({len(registros)} registros)")
 
+
 def main():
     print(" INICIO DEL PROCESO DE RECOLECCIÓN Y UNIFICACIÓN ")
     
     # Paso 1: Ejecutar todos los spiders
-    #ejecutar_spiders()
+    ejecutar_spiders()
     
     # Paso 2: Cargar y combinar resultados
     resultados = cargar_resultados()
