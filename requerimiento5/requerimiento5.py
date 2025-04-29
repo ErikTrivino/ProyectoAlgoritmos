@@ -6,6 +6,9 @@ import numpy as np
 from collections import defaultdict, Counter
 import matplotlib.pyplot as plt
 from typing import List, Dict, Tuple
+from pathlib import Path
+
+
 
 class RISAnalyzer:
     def __init__(self, ris_file_path: str):
@@ -286,11 +289,20 @@ class ReportGenerator:
 
 def main():
     # Configuración inicial
-    ris_file = 'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento1/resultados_unificados.ris'
-    output_dir = 'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento5'
+
+    # Directorio base: carpeta que contiene el script actual
+    base_dir = Path(__file__).resolve().parent
+
+    # Subir un nivel para llegar al nivel donde está la carpeta 'resultados' externa
+    project_root = base_dir.parent
+
+    # Definir rutas relativas desde el root del proyecto
+    ris_file = project_root / 'resultados' / 'requerimiento1' / 'resultados_unificados.ris'
+    output_dir = project_root / 'resultados' / 'requerimiento5'
+
     os.makedirs(output_dir, exist_ok=True)
     
-     # 1. Cargar y preparar datos
+    # 1. Cargar y preparar datos
     print("📂 Iniciando análisis...")
     analyzer = RISAnalyzer(ris_file)
     analyzer.load_and_preprocess_data()

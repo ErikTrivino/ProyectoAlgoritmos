@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "source_file": "C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultados_unificados_20250421_125021.ris",
-    "timestamp": "20250423_100530",
+    "source_file": "resultados/requerimiento1/resultados_unificados.ris",
+    "timestamp": "2025-04-29 10:01:30",
     "total_publications": 130
   },
   "top_authors": {
@@ -41,8 +41,7 @@
       "2021.0": 5,
       "2022.0": 6,
       "2023.0": 4,
-      "2024.0": 7,
-      "4600.0": 1
+      "2024.0": 4
     }
   },
   "publication_types": {

@@ -2,22 +2,29 @@ import subprocess
 import os
 from datetime import datetime
 
+def get_project_root():
+    """Obtiene la ruta raíz del proyecto basado en la ubicación de este script"""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # Asumiendo que este script está en ProyectoAlgoritmos/requerimiento1/
+    return os.path.dirname(os.path.dirname(current_dir))
+
 def ejecutar_spiders():
-    """Ejecuta todos los spiders de Scrapy"""
+    """Ejecuta todos los spiders de Scrapy usando rutas relativas"""
+    project_root = get_project_root()
     spiders = [
-        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/bibliotecaCraiScrapy.py',
-        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/googleAcademyScrapy.py',
-        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/ieeeXploreScrapy.py'
+        os.path.join(project_root, 'requerimiento1', 'scrapy', 'bibliotecaCraiScrapy.py'),
+        os.path.join(project_root, 'requerimiento1', 'scrapy', 'googleAcademyScrapy.py'),
+        os.path.join(project_root, 'requerimiento1', 'scrapy', 'ieeeXploreScrapy.py')
     ]
     
     print("\n=== EJECUTANDO SPIDERS ===")
     for spider in spiders:
-        print(f"\nEjecutando {spider}...")
+        print(f"\nEjecutando {os.path.basename(spider)}...")
         try:
             subprocess.run(['python', '-m', 'scrapy', 'runspider', spider], check=True)
-            print(f" {spider} completado con éxito")
+            print(f" {os.path.basename(spider)} completado con éxito")
         except subprocess.CalledProcessError as e:
-            print(f" Error en {spider}: {e}")
+            print(f" Error en {os.path.basename(spider)}: {e}")
     print("\n Todos los spiders completados")
 
 def parsear_ris(contenido: str) -> list:
@@ -77,35 +84,19 @@ def parsear_ris(contenido: str) -> list:
     return registros
 
 def cargar_resultados() -> list:
-    """Carga y combina todos los archivos RIS generados"""
+    """Carga y combina todos los archivos RIS generados usando rutas relativas"""
+    project_root = get_project_root()
     archivos_ris = [
-        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultadosBibliotecaCrai.ris', 
-        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultadosGoogleAcademy.ris',
-        'C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy/resultadosIeeexplore.ris'
+        os.path.join(project_root, 'requerimiento1', 'scrapy', 'resultadosBibliotecaCrai.ris'), 
+        os.path.join(project_root, 'requerimiento1', 'scrapy', 'resultadosGoogleAcademy.ris'),
+        os.path.join(project_root, 'requerimiento1', 'scrapy', 'resultadosIeeexplore.ris')
     ]
     resultados = []
 
-    
-    """for archivo in archivos_ris:
-        try:
-            with open(archivo, 'r', encoding='utf-8') as f:
-                contenido = f.read()
-                print(f"\n=== DEBUG: Contenido de {archivo} ===")
-                print(contenido[:500])  # Muestra las primeras líneas
-                
-                datos = parsear_ris(contenido)
-                print(f"\nRegistros parseados: {len(datos)}")
-                if datos:
-                    print("Ejemplo de registro:", datos[0])
-                
-                resultados.extend(datos)
-        except Exception as e:
-            print(f"Error crítico en {archivo}: {str(e)}")"""
-    
     print("\n=== CARGANDO RESULTADOS ===")
     for archivo in archivos_ris:
         if not os.path.exists(archivo):
-            print(f" Archivo no encontrado: {archivo}")
+            print(f" Archivo no encontrado: {os.path.basename(archivo)}")
             continue
             
         try:
@@ -114,11 +105,11 @@ def cargar_resultados() -> list:
                 datos = parsear_ris(contenido)
                 for item in datos:
                     # Añadir metadata de origen
-                    item['fuente'] = os.path.splitext(archivo)[0]
+                    item['fuente'] = os.path.splitext(os.path.basename(archivo))[0]
                 resultados.extend(datos)
-                print(f" {archivo}: {len(datos)} registros cargados")
+                print(f" {os.path.basename(archivo)}: {len(datos)} registros cargados")
         except Exception as e:
-            print(f" Error al leer {archivo}: {str(e)[:100]}...")
+            print(f" Error al leer {os.path.basename(archivo)}: {str(e)[:100]}...")
     
     return resultados
 
@@ -216,25 +207,22 @@ def generar_registro_ris(item: dict) -> str:
     return ris
 
 def guardar_resultados(registros: list, prefijo: str):
-    """Guarda los registros en archivos RIS dentro de resultados/requerimiento1"""
+    """Guarda los registros en archivos RIS dentro de resultados/requerimiento1 usando rutas relativas"""
     if not registros:
         print(f" No hay registros para guardar en {prefijo}")
         return
     
-    # Carpeta fija
-    output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento1"
+    project_root = get_project_root()
+    output_dir = os.path.join(project_root, 'resultados', 'requerimiento1')
     os.makedirs(output_dir, exist_ok=True)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    #nombre_archivo = os.path.join(output_dir, f"{prefijo}_{timestamp}.ris")
     nombre_archivo = os.path.join(output_dir, f"{prefijo}.ris")
     
     with open(nombre_archivo, 'w', encoding='utf-8') as f:
         for registro in registros:
             f.write(generar_registro_ris(registro))
     
-    print(f" Archivo guardado: {nombre_archivo} ({len(registros)} registros)")
-
+    print(f" Archivo guardado: {os.path.relpath(nombre_archivo, project_root)} ({len(registros)} registros)")
 
 def main():
     print(" INICIO DEL PROCESO DE RECOLECCIÓN Y UNIFICACIÓN ")
