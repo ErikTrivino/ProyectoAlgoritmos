@@ -14,20 +14,22 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.cluster import AgglomerativeClustering
 from scipy.cluster.hierarchy import linkage, dendrogram
 
-# Descarga de stopwords
+# === DESCARGA DE STOPWORDS ===
 nltk.download('stopwords')
 STOPWORDS = set(nltk.corpus.stopwords.words('english'))
 PUNCT_RE = re.compile(f"[{re.escape(string.punctuation)}]")
 
 # === CONFIGURACIÓN DE PATHS ===
-dendrograma_path = "resultados/requerimiento1"
-Path(dendrograma_path).mkdir(parents=True, exist_ok=True)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+
+RIS_PATH = os.path.join(PROJECT_ROOT, "resultados", "requerimiento1", "resultados_unificados.ris")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "resultados", "requerimiento5")
+Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
 
 # === LECTURA Y EXTRACCIÓN DE ABSTRACTS DESDE .RIS ===
-ris_path = "C:/Users/erikp/Escritorio/Proyecto Algoritmos/resultados/requerimiento1/resultados_unificados.ris"
-
 abstracts = []
-with open(ris_path, 'r', encoding='utf-8') as f:
+with open(RIS_PATH, 'r', encoding='utf-8') as f:
     for line in f:
         if line.startswith("AB  - "):
             abstracts.append(line.replace("AB  - ", "").strip())
@@ -45,7 +47,7 @@ def preprocess_text(text):
 cleaned_abstracts = [preprocess_text(a) for a in abstracts]
 
 # === GUARDAR ARCHIVOS PREPROCESADOS ===
-preproc_file = os.path.join(dendrograma_path, "preprocessed_abstracts.txt")
+preproc_file = os.path.join(OUTPUT_DIR, "preprocessed_abstracts.txt")
 with open(preproc_file, 'w', encoding='utf-8') as f:
     for doc in cleaned_abstracts:
         f.write(doc + "\n")
@@ -60,7 +62,7 @@ Z1 = linkage(dist_tfidf, method='single')
 plt.figure(figsize=(10, 6))
 dendrogram(Z1)
 plt.title("Dendrograma TF-IDF (Single Linkage)")
-plt.savefig(os.path.join(dendrograma_path, "dendrograma_algoritmo_uno.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "dendrograma_algoritmo_uno.png"))
 plt.close()
 
 # CountVectorizer
@@ -70,7 +72,7 @@ Z2 = linkage(dist_count, method='complete')
 plt.figure(figsize=(10, 6))
 dendrogram(Z2)
 plt.title("Dendrograma CountVectorizer (Complete Linkage)")
-plt.savefig(os.path.join(dendrograma_path, "dendrograma_algoritmo_dos.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "dendrograma_algoritmo_dos.png"))
 plt.close()
 
 # === DENDROGRAMA JERÁRQUICO TRUNCADO ===
@@ -80,7 +82,7 @@ dendrogram(Z, truncate_mode='lastp', p=30)
 plt.title('Dendrograma Jerárquico')
 plt.xlabel('Índice del Abstract')
 plt.ylabel('Distancia')
-plt.savefig(os.path.join(dendrograma_path, "dendrograma_jerarquico.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "dendrograma_jerarquico.png"))
 plt.close()
 
 # === CLUSTERING Y ANÁLISIS DE PALABRAS ===
@@ -117,5 +119,5 @@ plt.title(f'Distribución de Abstracts por Cluster (n={n_clusters})')
 plt.xlabel('Cluster')
 plt.ylabel('Número de Abstracts')
 plt.xticks(range(n_clusters))
-plt.savefig(os.path.join(dendrograma_path, "distribucion_clusters_optimizado.png"))
+plt.savefig(os.path.join(OUTPUT_DIR, "distribucion_clusters_optimizado.png"))
 plt.close()

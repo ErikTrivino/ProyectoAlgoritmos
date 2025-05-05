@@ -5,41 +5,92 @@ import json
 import subprocess
 from PIL import Image
 
-# Directorio base del proyecto (donde se encuentra este archivo .py)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# === CONFIGURACIÓN DE RUTAS ===
 
-# Configuración de rutas de resultados
-RESULTS_DIR = os.path.join(BASE_DIR, "resultados")
-REQ1_DIR = os.path.join(RESULTS_DIR, "requerimiento1")
-REQ2_DIR = os.path.join(RESULTS_DIR, "requerimiento2")
-REQ3_DIR = os.path.join(RESULTS_DIR, "requerimiento3")
-REQ5_DIR = os.path.join(RESULTS_DIR, "requerimiento5")
+def get_project_root():
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Rutas de scripts a ejecutar (rutas relativas al BASE_DIR)
-SCRIPTS = {
-    "req1": os.path.join(BASE_DIR, "requerimiento1", "scrapy", "MainScrapys.py"),
-    "req2": os.path.join(BASE_DIR, "requerimiento2", "requerimiento2.py"),
-    "req3": os.path.join(BASE_DIR, "requerimiento3", "requerimiento3.py"),
-    "req5_endograma": os.path.join(BASE_DIR, "requerimiento5", "endograma.py"),
-    "req5": os.path.join(BASE_DIR, "requerimiento5", "requerimiento5.py"),
+PROJECT_ROOT = get_project_root()
+
+def get_result_dir(req_name):
+    return os.path.join(PROJECT_ROOT, "resultados", req_name)
+
+RESULTS_DIRS = {
+    "req1": get_result_dir("requerimiento1"),
+    "req2": get_result_dir("requerimiento2"),
+    "req3": get_result_dir("requerimiento3"),
+    "req5": get_result_dir("requerimiento5"),
 }
 
+SCRIPTS = {
+    "req1": os.path.join(PROJECT_ROOT, "requerimiento1", "scrapy", "MainScrapys.py"),
+    "req2": os.path.join(PROJECT_ROOT, "requerimiento2", "requerimiento2.py"),
+    "req3": os.path.join(PROJECT_ROOT, "requerimiento3", "requerimiento3.py"),
+    "req5_endograma": os.path.join(PROJECT_ROOT, "requerimiento5", "endograma.py"),
+    "req5": os.path.join(PROJECT_ROOT, "requerimiento5", "requerimiento5.py"),
+}
 
-# Configuración de página
+# === CONFIGURACIÓN DE PÁGINA STREAMLIT ===
+
 st.set_page_config(
     page_title="Análisis Bibliométrico - Pensamiento Computacional",
     page_icon="📊",
     layout="wide"
 )
 
-# CSS (puedes agregar el tuyo)
+# Estilos CSS personalizados
 st.markdown("""
     <style>
-    /* Tus estilos personalizados */
+    .main-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .requirement-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #3498db;
+        margin: 20px 0 15px 0;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #3498db;
+    }
+    .sub-title {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #2c3e50;
+        margin: 15px 0 10px 0;
+    }
+    .graph-container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .graph-title {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+    .graph-description {
+        font-size: 0.9em;
+        color: #7f8c8d;
+        margin-bottom: 10px;
+    }
+    .result-section {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
     </style>
 """, unsafe_allow_html=True)
 
-# Funciones auxiliares
+# === FUNCIONES AUXILIARES ===
+
 def safe_json_load(filepath):
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -58,46 +109,61 @@ def safe_image_load(filepath):
 def load_results():
     results = {}
     try:
+        req1_dir = RESULTS_DIRS["req1"]
+        req2_dir = RESULTS_DIRS["req2"]
+        req3_dir = RESULTS_DIRS["req3"]
+        req5_dir = RESULTS_DIRS["req5"]
+
         results['req1'] = {
-            'unified_file': os.path.join(REQ1_DIR, "resultados_unificados.ris"),
+            'unified_file': os.path.join(req1_dir, "resultados_unificados.ris"),
             'stats': {
                 'total_records': 1245,
                 'duplicates': 320,
                 'unique_records': 925
             }
         }
-        req2_stats = safe_json_load(os.path.join(REQ2_DIR, "bibliometric_stats.json"))
+
+        req2_stats = safe_json_load(os.path.join(req2_dir, "bibliometric_stats.json"))
         results['req2'] = {
-            'top_authors_img': os.path.join(REQ2_DIR, "top_authors.png"),
-            'publications_by_year_img': os.path.join(REQ2_DIR, "publications_by_year_type.png"),
-            'publication_types_img': os.path.join(REQ2_DIR, "publication_types.png"),
-            'top_journals_img': os.path.join(REQ2_DIR, "top_journals.png"),
-            'top_publishers_img': os.path.join(REQ2_DIR, "top_publishers.png"),
+            'top_authors_img': os.path.join(req2_dir, "top_authors.png"),
+            'publications_by_year_img': os.path.join(req2_dir, "publications_by_year_type.png"),
+            'publication_types_img': os.path.join(req2_dir, "publication_types.png"),
+            'top_journals_img': os.path.join(req2_dir, "top_journals.png"),
+            'top_publishers_img': os.path.join(req2_dir, "top_publishers.png"),
             'stats': req2_stats if req2_stats else {
                 'top_journals': [],
                 'top_publishers': [],
                 'year_with_most_publications': 'N/A'
             }
         }
-        wordclouds = {
-            'global': os.path.join(REQ3_DIR, "wordcloud_global.png"),
-            'habilidades': os.path.join(REQ3_DIR, "wordcloud_Habilidades.png"),
-            'conceptos': os.path.join(REQ3_DIR, "wordcloud_Conceptos Computacionales.png"),
-            'actitudes': os.path.join(REQ3_DIR, "wordcloud_Actitudes.png"),
-            'cooccurrence': os.path.join(REQ3_DIR, "cooccurrence_network.png")
-        }
+
+        import glob
+
+        # Obtener todas las wordclouds del req3
+        wordcloud_paths = glob.glob(os.path.join(req3_dir, "wordcloud_*.png"))
+        wordclouds = {os.path.splitext(os.path.basename(p))[0].replace("wordcloud_", "").replace("_", " "): p for p in wordcloud_paths}
+
         results['req3'] = {
             'wordclouds': wordclouds,
-            'cooccurrence_img': os.path.join(REQ3_DIR, "cooccurrence_network.png")
+            'cooccurrence_img': os.path.join(req3_dir, "cooccurrence_network.png")
         }
-        req5_stats = safe_json_load(os.path.join(REQ5_DIR, "reporte_detallado.json"))
-        results['req5'] = {
-            'clusters_img': os.path.join(REQ5_DIR, "clusters.png"),
-            'similarity_matrix_img': os.path.join(REQ5_DIR, "similarity_matrix.png"),
-            'stats': req5_stats if req5_stats else {
-                'clusters': []
-            }
-        }
+
+
+        req5_stats = safe_json_load(os.path.join(req5_dir, "reporte_detallado.json"))
+        results['req5'] = {}  # Asegura que la clave 'req5' exista
+
+        # Carga todas las imágenes PNG de la carpeta
+        image_paths = glob.glob(os.path.join(req5_dir, "*.png"))
+        results['req5']['imagenes'] = image_paths
+
+        # Si quieres seguir usando 'dendrogramas' por separado (opcional)
+        results['req5']['dendrogramas'] = [p for p in image_paths if 'dendrograma' in os.path.basename(p)]
+
+        # También podrías cargar otros datos si es necesario, por ejemplo:
+        # results['req5']['summary_table'] = os.path.join(req5_dir, "resumen_clusters.csv") (si existe)
+
+
+
     except Exception as e:
         st.error(f"Error inicializando estructura de resultados: {str(e)}")
     return results
@@ -123,7 +189,123 @@ def run_script(path, label=None):
         st.error(f"Error al ejecutar {label or path}: {e}")
         raise e
 
-# Función principal
+def display_results(results):
+    """Muestra los resultados organizados por requerimiento"""
+    # Requerimiento 1: Unificación de datos
+    st.markdown('<div class="requirement-title">Requerimiento 1: Unificación de Datos y Eliminación de Duplicados</div>', unsafe_allow_html=True)
+    
+    with st.expander("Ver resultados completos"):
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown('<div class="graph-container">', unsafe_allow_html=True)
+            st.markdown('<div class="graph-title">Archivo Unificado Generado</div>', unsafe_allow_html=True)
+            st.markdown('<div class="graph-description">Formato RIS con todos los registros únicos</div>', unsafe_allow_html=True)
+            try:
+                with open(results['req1']['unified_file'], 'rb') as f:
+                    st.download_button(
+                        label="Descargar resultados_unificados.ris",
+                        data=f,
+                        file_name="resultados_unificados.ris",
+                        mime="application/ris"
+                    )
+            except Exception as e:
+                st.error(f"No se pudo cargar el archivo RIS: {str(e)}")
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown('<div class="result-section">', unsafe_allow_html=True)
+            st.markdown('**Resumen de la unificación:**')
+            st.write(f"- Total de registros recolectados: {results['req1']['stats']['total_records']}")
+            st.write(f"- Registros duplicados identificados: {results['req1']['stats']['duplicates']}")
+            st.write(f"- Registros únicos en el archivo final: {results['req1']['stats']['unique_records']}")
+            st.write("- Formatos de exportación: RIS")
+            st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Requerimiento 2: Estadísticos básicos
+    st.markdown('<div class="requirement-title">Requerimiento 2: Estadísticos Bibliométricos</div>', unsafe_allow_html=True)
+    
+    with st.expander("Ver resultados completos"):
+        st.markdown('<div class="sub-title">Principales Estadísticas</div>', unsafe_allow_html=True)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # Top Autores
+            st.markdown('<div class="graph-container">', unsafe_allow_html=True)
+            st.markdown('<div class="graph-title">Top Autores</div>', unsafe_allow_html=True)
+            img = safe_image_load(results['req2']['top_authors_img'])
+            if img:
+                st.image(img, use_container_width=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Publicaciones por año
+            st.markdown('<div class="graph-container">', unsafe_allow_html=True)
+            st.markdown('<div class="graph-title">Publicaciones por Año y Tipo</div>', unsafe_allow_html=True)
+            img = safe_image_load(results['req2']['publications_by_year_img'])
+            if img:
+                st.image(img, use_container_width=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with col2:
+            # Tipos de publicación
+            st.markdown('<div class="graph-container">', unsafe_allow_html=True)
+            st.markdown('<div class="graph-title">Distribución por Tipo de Producto</div>', unsafe_allow_html=True)
+            img = safe_image_load(results['req2']['publication_types_img'])
+            if img:
+                st.image(img, use_container_width=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Datos adicionales
+            st.markdown('<div class="result-section">', unsafe_allow_html=True)
+            st.markdown('**Datos adicionales:**')
+            display_top_items("Top Journals", results['req2']['stats'].get('top_journals', []))
+            display_top_items("Top Publishers", results['req2']['stats'].get('top_publishers', []))
+            st.write(f"- Año con más publicaciones: {results['req2']['stats'].get('year_with_most_publications', 'N/A')}")
+            st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Mostrar wordclouds de todas las categorías
+    # REQUERIMIENTO 3
+    st.markdown('<div class="section-title">Requerimiento 3: Análisis de Palabras Clave</div>', unsafe_allow_html=True)
+    
+    st.markdown('<div class="sub-title">Nube de Palabras por Categorías</div>', unsafe_allow_html=True)
+    if results['req3']['wordclouds']:
+        tab_names = list(results['req3']['wordclouds'].keys())
+        tabs = st.tabs(tab_names)
+        for tab, name in zip(tabs, tab_names):
+            with tab:
+                img = safe_image_load(results['req3']['wordclouds'][name])
+                if img:
+                    st.image(img, caption=name.title(), use_container_width=True)
+    else:
+        st.info("No se encontraron imágenes de nubes de palabras.")
+
+
+    # REQUERIMIENTO 5
+    # Mostrar todas las imágenes en la carpeta de requerimiento 5
+    st.markdown('<div class="sub-title">Visualización de Imágenes del Requerimiento 5</div>', unsafe_allow_html=True)
+    for img_path in results['req5'].get('imagenes', []):
+        img = safe_image_load(img_path)
+        if img:
+            st.image(img, caption=os.path.basename(img_path), use_container_width=True)
+
+
+
+    """ # Mostrar todos los dendogramas
+    st.markdown('<div class="sub-title">Dendogramas y Distribuciones</div>', unsafe_allow_html=True)
+    for dendro_path in results['req5'].get('dendrogramas', []):
+        img = safe_image_load(dendro_path)
+        if img:
+            st.image(img, caption=os.path.basename(dendro_path), use_container_width=True)
+
+    # Tabla resumen (si es necesario cargar como DataFrame, puedes usar pandas)
+    st.markdown('<div class="sub-title">Resumen de Clusters</div>', unsafe_allow_html=True)
+    st.markdown(f"Archivo CSV: `{results['req5']['summary_table']}`")
+        """
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# === FUNCIÓN PRINCIPAL DE STREAMLIT ===
+
 def main():
     st.markdown('<div class="main-title">Análisis Bibliométrico<br>Pensamiento Computacional</div>', unsafe_allow_html=True)
     st.write("""
@@ -158,10 +340,9 @@ def main():
                 st.error("Se detuvo el análisis debido a un error.")
                 return
 
-    # Aquí seguiría el código que muestra los resultados (ya incluido en tu código original)
     if st.session_state.get('analysis_done', False):
         results = st.session_state.results
-        # ... (el resto de visualización ya lo tienes)
+        display_results(results)
 
 if __name__ == "__main__":
     main()

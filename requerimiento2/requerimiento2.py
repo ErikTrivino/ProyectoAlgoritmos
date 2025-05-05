@@ -266,10 +266,19 @@ def main():
     print("=== Analizador Bibliométrico - Requerimiento 2 ===")
     print("Este script genera estadísticas a partir del archivo unificado\n")
     
-    unified_file = 'resultados/requerimiento1/resultados_unificados.ris'
+    # Obtener ruta absoluta al archivo unificado desde la raíz del proyecto
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    PROJECT_ROOT = os.path.dirname(BASE_DIR)
+    unified_file = os.path.join(PROJECT_ROOT, "resultados", "requerimiento1", "resultados_unificados.ris")
+
+    # Validación del archivo
     while not os.path.exists(unified_file):
-        print("Archivo no encontrado. Intente nuevamente.")
-        unified_file = input("Ruta al archivo unificado (RIS o BibTeX): ").strip()
+        print("Archivo no encontrado en:", unified_file)
+        user_input = input("Ruta al archivo unificado (RIS o BibTeX): ").strip()
+        if os.path.isabs(user_input):
+            unified_file = user_input
+        else:
+            unified_file = os.path.abspath(user_input)
 
     analyzer = BibliometricAnalyzer(unified_file)
     
