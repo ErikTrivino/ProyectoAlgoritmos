@@ -266,28 +266,34 @@ def display_results(results):
     
     # Mostrar wordclouds de todas las categorías
     # REQUERIMIENTO 3
-    st.markdown('<div class="section-title">Requerimiento 3: Análisis de Palabras Clave</div>', unsafe_allow_html=True)
+    st.markdown('<div class="requirement-title">Requerimiento 3: Ver nube de palabras</div>', unsafe_allow_html=True)
     
-    st.markdown('<div class="sub-title">Nube de Palabras por Categorías</div>', unsafe_allow_html=True)
-    if results['req3']['wordclouds']:
-        tab_names = list(results['req3']['wordclouds'].keys())
-        tabs = st.tabs(tab_names)
-        for tab, name in zip(tabs, tab_names):
-            with tab:
-                img = safe_image_load(results['req3']['wordclouds'][name])
-                if img:
-                    st.image(img, caption=name.title(), use_container_width=True)
-    else:
-        st.info("No se encontraron imágenes de nubes de palabras.")
+    with st.expander("Ver resultados completos"):
+        st.markdown('<div class="section-title">Requerimiento 3: Análisis de Palabras Clave</div>', unsafe_allow_html=True)
+        
+        st.markdown('<div class="sub-title">Nube de Palabras por Categorías</div>', unsafe_allow_html=True)
+        if results['req3']['wordclouds']:
+            tab_names = list(results['req3']['wordclouds'].keys())
+            tabs = st.tabs(tab_names)
+            for tab, name in zip(tabs, tab_names):
+                with tab:
+                    img = safe_image_load(results['req3']['wordclouds'][name])
+                    if img:
+                        st.image(img, caption=name.title(), use_container_width=True)
+        else:
+            st.info("No se encontraron imágenes de nubes de palabras.")
 
 
     # REQUERIMIENTO 5
     # Mostrar todas las imágenes en la carpeta de requerimiento 5
-    st.markdown('<div class="sub-title">Visualización de Imágenes del Requerimiento 5</div>', unsafe_allow_html=True)
-    for img_path in results['req5'].get('imagenes', []):
-        img = safe_image_load(img_path)
-        if img:
-            st.image(img, caption=os.path.basename(img_path), use_container_width=True)
+    st.markdown('<div class="requirement-title">Requerimiento 5: Ver tecnicas de similitud</div>', unsafe_allow_html=True)
+    
+    with st.expander("Ver resultados completos"):
+        st.markdown('<div class="sub-title">Visualización de Imágenes del Requerimiento 5</div>', unsafe_allow_html=True)
+        for img_path in results['req5'].get('imagenes', []):
+            img = safe_image_load(img_path)
+            if img:
+                st.image(img, caption=os.path.basename(img_path), use_container_width=True)
 
 
 
