@@ -232,7 +232,7 @@ class BibliometricAnalyzer:
         project_root = base_dir.parent
         # Definir rutas relativas desde el root del proyecto
         #ris_file = project_root / 'resultados' / 'requerimiento1' / 'resultados_unificados.ris'
-        output_dir = project_root / 'resultados' / 'requerimiento5'
+        output_dir = project_root / 'resultados' / 'requerimiento2'
         os.makedirs(output_dir, exist_ok=True)
 
         self.generate_visualizations(output_dir)

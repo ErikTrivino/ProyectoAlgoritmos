@@ -161,7 +161,7 @@ for categoria, counter in freq_por_categoria.items():
 # Generar visualizaciones
 #output_dir = "visualizations"
 #output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/resultados/requerimiento3"
-output_dir = project_root / 'resultados' / 'requerimiento5'
+output_dir = project_root / 'resultados' / 'requerimiento3'
 os.makedirs(output_dir, exist_ok=True)
 
 # Nube de palabras global
