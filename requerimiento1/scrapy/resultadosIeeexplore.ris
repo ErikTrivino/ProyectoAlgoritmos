@@ -39,16 +39,6 @@ UR  - https://ieeexplore.ieee.org/document/9247066/
 ER  -
 
 TY  - JOUR
-TI  - Mapping computational thinking mindsets between educational levels with cognitive network science
-AU  - 
-PY  - 
-JF  - 
-PB  - IEEE
-AB  - A significant aspect of computational thinking is as a way of reasoning about the world in terms of data. This mindset channels number-crunching toward an ambition to discover knowledge through logic, models and simulations. Here we show how computational cognitive science can be used to reconstruct and analyse the structure of computational thinking mindsets (forma mentis in Latin) through complex networks. As a case study, we investigate cognitive networks tied to key concepts of computational thinking provided by (i) 159 high school students enrolled in a science curriculum and (ii) 59 researchers in complex systems and simulations. Researchers' reconstructed knowledge highlighted a positive mindset about scientific modelling, semantically framing data and simulations as ways of discovering nature. Students correctly identified different aspects of logic reasoning but perceived 'computation' as a distressing, anxiety-eliciting task, framed with math jargon and lacking links to real-world discovery. Students' mindsets around 'data', 'model' and 'simulations' critically revealed no awareness of numerical modelling as a way for understanding the world. Our findings provide evidence of a crippled computational thinking mindset in students, who acquire mathematical skills that are not channelled toward real-world discovery through coding. This unlinked knowledge ends up being perceived as distressing number-crunching expertise with no relevant outcome. The virtuous mindset of researchers reported here indicates that computational thinking can be restored by training students specifically in coding, modelling and simulations in relation to discovering nature. Our approach opens innovative ways for quantifying computational thinking and enhancing its development through mindset reconstruction.
-UR  - https://ieeexplore.ieee.org/document/9684795/
-ER  -
-
-TY  - JOUR
 TI  - Computer Science Unplugged for Developing Computational Thinking and Mathematical Thinking
 AU  - Takayasu Nakamura, Tetsushi Kawasaki
 PY  - 2019
@@ -56,6 +46,16 @@ JF  - Osaka, Japan
 PB  - IEEE
 AB  - The purpose of this study is to make learning material that can develop both Computational thinking and Mathematical thinking. This study suggest a hamburger flowchart as a teaching material that combines the three elements of "unplugged", "thinking from the end " and "mathematics class". Using this flowchart, basic experiment was conducted for 8 to 12 years old. The purpose of this experiment is to confirm whether it is possible for children to develop both Computational thinking and Mathematical thinking by using the hamburger flowchart. We evaluated both Computational thinking and Mathematical thinking from the state in this class and the content of the worksheet and prior and subsequent tests. As a result, the state related to Computational thinking and Mathematical thinking increased, and the correct answer rate of many children increased from the prior test to the subsequent test. Therefore it turned out that the hamburger flowchart affects mathematical thinking.
 UR  - https://ieeexplore.ieee.org/document/9066359/
+ER  -
+
+TY  - JOUR
+TI  - Mapping computational thinking mindsets between educational levels with cognitive network science
+AU  - 
+PY  - 
+JF  - 
+PB  - IEEE
+AB  - A significant aspect of computational thinking is as a way of reasoning about the world in terms of data. This mindset channels number-crunching toward an ambition to discover knowledge through logic, models and simulations. Here we show how computational cognitive science can be used to reconstruct and analyse the structure of computational thinking mindsets (forma mentis in Latin) through complex networks. As a case study, we investigate cognitive networks tied to key concepts of computational thinking provided by (i) 159 high school students enrolled in a science curriculum and (ii) 59 researchers in complex systems and simulations. Researchers' reconstructed knowledge highlighted a positive mindset about scientific modelling, semantically framing data and simulations as ways of discovering nature. Students correctly identified different aspects of logic reasoning but perceived 'computation' as a distressing, anxiety-eliciting task, framed with math jargon and lacking links to real-world discovery. Students' mindsets around 'data', 'model' and 'simulations' critically revealed no awareness of numerical modelling as a way for understanding the world. Our findings provide evidence of a crippled computational thinking mindset in students, who acquire mathematical skills that are not channelled toward real-world discovery through coding. This unlinked knowledge ends up being perceived as distressing number-crunching expertise with no relevant outcome. The virtuous mindset of researchers reported here indicates that computational thinking can be restored by training students specifically in coding, modelling and simulations in relation to discovering nature. Our approach opens innovative ways for quantifying computational thinking and enhancing its development through mindset reconstruction.
+UR  - https://ieeexplore.ieee.org/document/9684795/
 ER  -
 
 TY  - JOUR
@@ -89,16 +89,6 @@ UR  - https://ieeexplore.ieee.org/document/7739688/
 ER  -
 
 TY  - JOUR
-TI  - Teaching mode reform and exploration on the University Computer Basic based on Computational thinking training in Network Environment
-AU  - Boqin Liu, Junmei He
-PY  - 2014
-JF  - Vancouver, BC, Canada
-PB  - IEEE
-AB  - Due to the international and domestic education and computer industries and so on computational thinking attaches great importance and has done considerable exploratory research, our school also reform and exploration teaching mode on the University Computer Basic based on Computational thinking training in network environment, and the use of based on Computational thinking Autonomous learning mode in the Network Environment in the actual teaching, strengthen the learners understanding of computer science, corrected the computing disciplines equivalent to the idea of computer programming, enhance the connotation and science significance of computer disciplines, to overcome the computer means "narrow tool" argument,and achieved good teaching results.
-UR  - https://ieeexplore.ieee.org/document/6926430/
-ER  -
-
-TY  - JOUR
 TI  - Computational Thinking & Practical Thinking Inspired Java Web Curriculum Reform Method
 AU  - Fengping Yu, Hong Wang
 PY  - 2019
@@ -116,6 +106,16 @@ JF  - Las Vegas, NV, USA
 PB  - IEEE
 AB  - Today, Computational Thinking is seen as an important competency and the fourth skill that every child should process. Several significant attempts have been made to increase a student's exposure to Computational Thinking at the K-12 level, however the process is complex and requires systematic planning and comprehensive curriculum. In this paper, we describe the STEPP-UP program that aims to introduce middle schoolers to Computational Thinking via Scratch and Java coding sessions. A comprehensive curriculum and hands-on activities are applied to introduce Computational Thinking for a total of 41 students for a period of five semesters from Fall 2017 until Fall 2019. To assess the learning objectives, we used three methods of evaluation; design-scenarios, paper-assessments, and learner-documentation. Findings indicate that the students have increased knowledge of Computational Thinking and its applications for problem solving.
 UR  - https://ieeexplore.ieee.org/document/9071265/
+ER  -
+
+TY  - JOUR
+TI  - Teaching mode reform and exploration on the University Computer Basic based on Computational thinking training in Network Environment
+AU  - Boqin Liu, Junmei He
+PY  - 2014
+JF  - Vancouver, BC, Canada
+PB  - IEEE
+AB  - Due to the international and domestic education and computer industries and so on computational thinking attaches great importance and has done considerable exploratory research, our school also reform and exploration teaching mode on the University Computer Basic based on Computational thinking training in network environment, and the use of based on Computational thinking Autonomous learning mode in the Network Environment in the actual teaching, strengthen the learners understanding of computer science, corrected the computing disciplines equivalent to the idea of computer programming, enhance the connotation and science significance of computer disciplines, to overcome the computer means "narrow tool" argument,and achieved good teaching results.
+UR  - https://ieeexplore.ieee.org/document/6926430/
 ER  -
 
 TY  - JOUR
@@ -139,13 +139,13 @@ UR  - https://ieeexplore.ieee.org/document/6268116/
 ER  -
 
 TY  - JOUR
-TI  - A Study of Micro:bit Teaching Design Based on the Development of Computational Thinking of Secondary School Students
-AU  - Junjie Liu, Xiaojun Xia, Yi Bai, Pingyao Liu
-PY  - 2022
-JF  - Xi'an, China
+TI  - Improving learning of computational thinking using creative thinking exercises in CS-1 computer science courses
+AU  - L. Dee Miller, Leen-Kiat Soh, Vlad Chiriacescu, Elizabeth Ingraham, Duane F. Shell, Stephen Ramsay
+PY  - 2013
+JF  - Oklahoma City, OK, USA
 PB  - IEEE
-AB  - With the rapid development of human society and technology, it's necessary for contemporary students to have the ability to quickly adapt to social development. Meanwhile, traditional educational concepts have to be transformed in time, and a full understanding of computational thinking plays an important role in promoting students' life-long development. Based on in-depth analysis and research on computational thinking theory, this paper integrates micro: bit into teaching from the perspective of practical application. After analyzing the teaching objectives, teaching contents, and teaching process, this paper proposes an instructional design for the development of computational thinking for secondary school students.
-UR  - https://ieeexplore.ieee.org/document/9973092/
+AB  - Promoting computational thinking is one of the top priorities in CS education as well as in other STEM and non-STEM disciplines. Our innovative NSF-funded IC2Think project blends computational thinking with creative thinking so that students leverage their creative thinking skills to "unlock" their understanding of computational thinking. In Fall 2012, we deployed creative exercises designed to engage Epstein's creative competencies (Surrounding, Capturing, Challenging and Broadening) in introductory level CS courses targeting four different groups (CS, engineering, combined CS/physical sciences, and humanities majors). Students combined hands-on problem solving with guided analysis and reflection to connect their creative activities to CS topics such as conditionals and arrays and to real-world CS applications. Evaluation results (approximately 150 students) found that creative thinking exercise completion had a linear "dosage" effect. As students completed more exercises [0/1 - 4], they increased their long-term retention [a computational thinking test], F(3, 98) = 4.76, p =.004, partial Eta 2 = .127 and course grades, F(3, 109) = 4.32, p =.006, partial Eta 2 = .106. These findings support our belief that the addition of creative thinking exercises to CSCE courses improves the learning of computational knowledge and skills.
+UR  - https://ieeexplore.ieee.org/document/6685067/
 ER  -
 
 TY  - JOUR
@@ -159,13 +159,13 @@ UR  - https://ieeexplore.ieee.org/document/10159750/
 ER  -
 
 TY  - JOUR
-TI  - Improving learning of computational thinking using creative thinking exercises in CS-1 computer science courses
-AU  - L. Dee Miller, Leen-Kiat Soh, Vlad Chiriacescu, Elizabeth Ingraham, Duane F. Shell, Stephen Ramsay
-PY  - 2013
-JF  - Oklahoma City, OK, USA
+TI  - A Study of Micro:bit Teaching Design Based on the Development of Computational Thinking of Secondary School Students
+AU  - Junjie Liu, Xiaojun Xia, Yi Bai, Pingyao Liu
+PY  - 2022
+JF  - Xi'an, China
 PB  - IEEE
-AB  - Promoting computational thinking is one of the top priorities in CS education as well as in other STEM and non-STEM disciplines. Our innovative NSF-funded IC2Think project blends computational thinking with creative thinking so that students leverage their creative thinking skills to "unlock" their understanding of computational thinking. In Fall 2012, we deployed creative exercises designed to engage Epstein's creative competencies (Surrounding, Capturing, Challenging and Broadening) in introductory level CS courses targeting four different groups (CS, engineering, combined CS/physical sciences, and humanities majors). Students combined hands-on problem solving with guided analysis and reflection to connect their creative activities to CS topics such as conditionals and arrays and to real-world CS applications. Evaluation results (approximately 150 students) found that creative thinking exercise completion had a linear "dosage" effect. As students completed more exercises [0/1 - 4], they increased their long-term retention [a computational thinking test], F(3, 98) = 4.76, p =.004, partial Eta 2 = .127 and course grades, F(3, 109) = 4.32, p =.006, partial Eta 2 = .106. These findings support our belief that the addition of creative thinking exercises to CSCE courses improves the learning of computational knowledge and skills.
-UR  - https://ieeexplore.ieee.org/document/6685067/
+AB  - With the rapid development of human society and technology, it's necessary for contemporary students to have the ability to quickly adapt to social development. Meanwhile, traditional educational concepts have to be transformed in time, and a full understanding of computational thinking plays an important role in promoting students' life-long development. Based on in-depth analysis and research on computational thinking theory, this paper integrates micro: bit into teaching from the perspective of practical application. After analyzing the teaching objectives, teaching contents, and teaching process, this paper proposes an instructional design for the development of computational thinking for secondary school students.
+UR  - https://ieeexplore.ieee.org/document/9973092/
 ER  -
 
 TY  - JOUR

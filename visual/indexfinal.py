@@ -283,6 +283,12 @@ def display_results(results):
         else:
             st.info("No se encontraron imágenes de nubes de palabras.")
 
+        # Red de co-ocurrencia
+        st.markdown('<div class="sub-title">Red de Co-ocurrencia</div>', unsafe_allow_html=True)
+        img = safe_image_load(results['req3']['cooccurrence_img'])
+        if img:
+            st.image(img, use_container_width=True)
+
 
     # REQUERIMIENTO 5
     # Mostrar todas las imágenes en la carpeta de requerimiento 5
