@@ -64,6 +64,8 @@ class BibliometricSpider(scrapy.Spider):
     name = 'bibliometric'
     export_format = None
     items = []
+    page_count = 0                # Contador de páginas procesadas
+    max_pages = 5 
 
     custom_settings = {
         'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -89,6 +91,12 @@ class BibliometricSpider(scrapy.Spider):
         yield scrapy.Request(url, callback=self.parse)
 
     def parse(self, response):
+        self.page_count += 1
+        print(f"\n📝 Procesando página {self.page_count}: {response.url}")
+
+        if self.page_count > self.max_pages:
+            print(f"🚫 Límite de {self.max_pages} páginas alcanzado.")
+            return
         for paper in response.xpath('//div[contains(@class, "gs_ri")]'):
             loader = ItemLoader(PaperItem(), selector=paper)
 
@@ -159,7 +167,7 @@ class BibliometricSpider(scrapy.Spider):
             return
 
         # Ruta completa donde quieres guardar el resultado:
-        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy"
+        output_dir = r"C:/Users/erikp/Escritorio/ProyectoAlgoritmos/requerimiento1/scrapy"
         filename = os.path.join(output_dir, f"resultadosGoogleAcademy.{self.export_format}")
 
         # Asegúrate de que el directorio exista:

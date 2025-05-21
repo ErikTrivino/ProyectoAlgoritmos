@@ -29,7 +29,7 @@ class IEEEXploreSpider(scrapy.Spider):
     name = 'ieee_xplore_full'
     export_format = None
     items = []
-    max_horizontal_pages = 2  # Límite de 2 paginaciones horizontales
+    max_horizontal_pages = 5  # Límite de 2 paginaciones horizontales
     current_horizontal_page = 1
     
     custom_settings = {
@@ -225,7 +225,7 @@ class IEEEXploreSpider(scrapy.Spider):
         self.driver.quit()
 
         # Directorio destino (ruta cruda para Windows)
-        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy"
+        output_dir = r"C:/Users/erikp/Escritorio/ProyectoAlgoritmos/requerimiento1/scrapy"
         # Construye nombre completo de archivo
         filename = os.path.join(output_dir, f"resultadosIeeexplore.{self.export_format}")
 

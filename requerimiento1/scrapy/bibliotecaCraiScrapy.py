@@ -65,7 +65,7 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
     start_urls = ['https://login.intelproxy.com/v2/inicio?cuenta=7Ah6RNpGWF22jjyq&url=ezp.2aHR0cHM6Ly9yZXNlYXJjaC5lYnNjby5jb20vYy9xNDZycGUvc2VhcmNoL3Jlc3VsdHM.bGltaXRlcnM9JnE9Y29tcHV0YXRpb25hbCt0aGlua2luZw--']
     export_format = None
     items = []
-    max_articles = 5  # Límite de artículos a scrapear
+    max_articles = 40  # Límite de artículos a scrapear
     
     custom_settings = {
         'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -158,8 +158,8 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
             self.driver.save_screenshot('error.png')
             raise
 
-    def get_article_links(self):
-        """Extract links to individual articles from search results"""
+    """def get_article_links(self):
+        #Extract links to individual articles from search results
         links = []
         try:
             # Find all article links in search results
@@ -177,7 +177,45 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
         except Exception as e:
             self.logger.error(f"Error al obtener enlaces: {str(e)}")
         
-        return links
+        return links"""
+    def get_article_links(self):
+        #Extrae enlaces de artículos con scroll/clics cada 10 artículos.
+        links = set()
+        try:
+            loaded = 0
+            while loaded < self.max_articles:
+                # Espera y obtiene todos los enlaces actualmente cargados
+                WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_all_elements_located((By.XPATH, "//a[contains(@href, '/details/')]"))
+                )
+                articles = self.driver.find_elements(By.XPATH, "//a[contains(@href, '/details/')]")
+                new_links = [a.get_attribute('href') for a in articles if a.get_attribute('href')]
+                links.update(new_links)
+                loaded = len(links)
+
+                # Si ya tenemos suficientes artículos, salimos
+                if loaded >= self.max_articles:
+                    break
+
+                # Intentamos hacer clic en el botón para cargar más artículos
+                try:
+                    load_more_button = WebDriverWait(self.driver, 5).until(
+                        EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/main/div/div/div[1]/div[3]/button"))
+                    )
+                    load_more_button.click()
+                    time.sleep(3)  # Espera para que los nuevos artículos se carguen
+                except Exception as e:
+                    self.logger.warning(f"No se pudo hacer clic en el botón de cargar más: {str(e)}")
+                    break
+
+        except Exception as e:
+            self.logger.error(f"Error al obtener enlaces: {str(e)}")
+
+        # Asegura que estén completos
+        base_url = "https://research-ebsco-com.crai.referencistas.com"
+        complete_links = [link if link.startswith('http') else base_url + link for link in links]
+        return list(complete_links)
+
 
     def parse_article_page(self, selector, url):
         """Parse an individual article page"""
@@ -206,9 +244,12 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
         loader.add_value('publisher', clean_text(publisher))
 
         # Year /html/body/div[2]/div/div/div[2]/div[2]/div[2]/div/main/div/div/div[1]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[8]/li
-        year = selector.xpath(
-            '//*[@id="details-page"]/div[2]/div/div/div[2]/div[2]/div[2]/div/main/div/div/div[1]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[8]/li//text()'
-        ).re_first(r'\d{4}')
+        #year = selector.xpath(
+        #    '//*[@id="details-page"]/div[2]/div/div/div[2]/div[2]/div[2]/div/main/div/div/div[1]/div[2]/div/div/div/div/section/div/div/div/div/div/div[2]/article/ul[8]/li//text()'
+        #).re_first(r'\d{4}')
+        # Year (robusto y dinámico)
+        year = selector.xpath('//h3[@id="Date"]/following-sibling::ul[1]/li/text()').re_first(r'\d{4}')
+        loader.add_value('year', clean_text(year))
         
         loader.add_value('year', clean_text(year))
 
@@ -266,7 +307,8 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
             return
 
         # Ruta completa donde quieres guardar el resultado:
-        output_dir = r"C:/Users/erikp/OneDrive/Documentos/GitHub/ProyectoAlgoritmos/requerimiento1/scrapy"
+        output_dir = r"C:/Users/erikp/Escritorio/ProyectoAlgoritmos/requerimiento1/scrapy"
+       # C:\Users\erikp\Escritorio\ProyectoAlgoritmos\requerimiento1\scrapy
         filename = os.path.join(output_dir, f"resultadosBibliotecaCrai.{self.export_format}")
 
         # Asegúrate de importar os al principio del archivo:
