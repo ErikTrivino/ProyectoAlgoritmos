@@ -101,8 +101,8 @@ class GoogleLoginBibliometricSpider(scrapy.Spider):
             """
         })
         # Credentials
-        self.correo = "erikp.trivinog@uqvirtual.edu.co"
-        self.password = "Erikpablot18"
+        self.correo = "correoLog"
+        self.password = "Contraseña"
         
         # Ask for export format
         while True:
